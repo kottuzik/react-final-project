@@ -1,6 +1,5 @@
-# react-final-project
+### React Final Project!
 
-Hey Eva! it is finally work. I hope we will do well.
-later I will start to work on the directory of the project.
+after you pull the project don't forget run the commend -npm install-
 
-good luck!
+Eva, I wish us luck. 
