@@ -3,6 +3,7 @@ import SearchField from './components/searchField/SearchField';
 
 const App = () => {
   return (
+    
     <SearchField />
   )
 }

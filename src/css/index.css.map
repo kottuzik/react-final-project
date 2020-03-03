@@ -1,9 +1,11 @@
 {
     "version": 3,
-    "mappings": "AACA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,GAAG;EAAE,OAAO,EAAE,GAAG;EAAE,UAAU,EAAE,UAAU;CACpD",
+    "mappings": "AACA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,GAAG;EAAE,OAAO,EAAE,GAAG;EAAE,UAAU,EAAE,UAAU;CACpD;;AACD,AAAA,IAAI,CAAA;EACA,WAAW,EAAE,6IAA6I;CAC7J",
     "sources": [
         "index.scss",
-        "../components/searchField/_search-field.scss"
+        "../components/searchField/_search-field.scss",
+        "sass-components/_common.scss",
+        "sass-components/_buttons.scss"
     ],
     "names": [],
     "file": "index.css"
