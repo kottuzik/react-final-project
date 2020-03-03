@@ -1,3 +1,6 @@
 // Here all the common colors and mixing
-
+*{
+    margin: 0px; padding: 0px; box-sizing: border-box;
+}
 // Here below bring all the components css
+@import '../components/searchField/search-field';
