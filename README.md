@@ -9,4 +9,6 @@ I added the pdf of the project.
 - Todos, and Posts component. I think they could be almost the same.
 - Add todo component.
 - Add new posts.
-- Add new user.
+
+### Things to solve:
+- In Users.jsx there is a problem with the filter. I puted there a message

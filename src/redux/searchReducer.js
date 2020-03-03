@@ -1,6 +1,6 @@
-export const usersReducer = (state = [], action) => {
+export const searchReducer = (state = "", action) => {
     switch (action.type){
-        case "GETFROMSERVER":
+        case "SEARCH":
             state = action.payload;
             return state;
         default:
