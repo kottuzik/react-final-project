@@ -5,6 +5,7 @@ const SearchField = () => {
 
     return(
         <div className="search-field">
+            <h2>Project</h2>
             <input type="text" id="search" />
             <label htmlFor="search"></label>
         </div>
