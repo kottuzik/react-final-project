@@ -8,8 +8,7 @@ const UserCard = ({ userData }) => {
     const [showOrHide, setShowOrHide] = useState(false)
 
     return(
-        <div className="user-card">
-
+        <div className="user-card card">
             <div className="first-user-details">
                 <label>Name: <input type="text" defaultValue={name} /></label>
                 <label>Email: <input type="text" defaultValue={email} /></label>
