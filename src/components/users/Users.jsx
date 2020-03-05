@@ -10,12 +10,12 @@ const Users = () => {
     let filteredUsers = users.filter(user => user.name.toLowerCase().includes(search));
 
     return(
-        <div>
+        <section className="users-section">
             <h1>Users:</h1>
           {filteredUsers.map(user => (
               <User key={user.id} userData={user} />
           ))}  
-        </div>
+        </section>
     )
 }
 
