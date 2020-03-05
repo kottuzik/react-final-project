@@ -14,7 +14,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #575757;
   background-color: #f8f7ff;
-  font-size: 16px;
+  font-size: 16rem;
 }
 
 .hide {
@@ -216,6 +216,12 @@ label {
           transform: translate(5px, 2px);
   font-size: small;
   font-style: italic;
+}
+
+.loading {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
 }
 
 .todo-card {
