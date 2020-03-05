@@ -153,10 +153,14 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
 }
 
 .search-field input {
+  width: 60%;
   position: relative;
   border-radius: 3px;
   border: 1px solid #2bb3e4;
