@@ -2,14 +2,15 @@
 .user-card{
   padding:12px; border-radius: 3px; border:1px solid #bababa;
   margin-bottom: 12px;
+  .navs{
+    display: flex; justify-content: space-between;
+  }
 }
 .first-user-details{
   display: flex; flex-direction: column;
   margin-bottom: 12px;
 }
-.navs{
-  display: flex; justify-content: space-between;
-}
+
 .other-data{
   display: flex; justify-content: space-between; flex-wrap: wrap; 
   align-items: flex-end;
