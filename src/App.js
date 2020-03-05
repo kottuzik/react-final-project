@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { getUsers, getTodos } from './utils'
+import { getUsers, getTodos, getPosts } from './utils'
 
 // Importing components
 import SearchField from './components/search-field/SearchField';
 import Users from './components/users/Users';
-import Todos from './components/todos/Todos';
+import UserPage from './pages/UserPage';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -14,8 +14,10 @@ const App = () => {
   const middlewhere = async () => {
     let users = await getUsers();
     let todos = await getTodos();
+    let posts = await getPosts();
     dispatch({ type: "GETUSERS", payload: users })
     dispatch({ type: "GETTODOS", payload: todos })
+    dispatch({ type: "GETPOSTS", payload: posts })
   }
 
   useEffect(() => {
@@ -26,7 +28,7 @@ const App = () => {
     <div>
       <SearchField />
       <Users />
-      <Route path="/:id" component={Todos} />
+      <Route path="/:id" component={UserPage} />
     </div>
   )
 }

@@ -24,3 +24,8 @@ export const getTodos = async () => {
     let todosResp = await axios.get('https://jsonplaceholder.typicode.com/todos');
     return todosResp.data;
 }
+
+export const getPosts = async () => {
+    let posts = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    return posts.data;
+}
