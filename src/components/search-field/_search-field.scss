@@ -1,4 +1,33 @@
-//search-field
+@mixin label {
+  transform: translateY(-20px);
+  font-style: normal;
+  color: #2bb3e4;
+}
+
 .search-field{
   display: flex;
+  position: relative;
+
+  input{
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid #2bb3e4;
+    padding-left: 6px;
+
+    &:focus + label{
+      @include label;
+    }
+    &:valid + label{
+      @include label;
+    }
+  }
+  label{
+    position: absolute;
+    color: rgb(196, 196, 196);
+    transition: 0.2s;
+    transform: translate(5px, 2px);
+    font-size: small;
+    font-style: italic;
+  }
+
 }

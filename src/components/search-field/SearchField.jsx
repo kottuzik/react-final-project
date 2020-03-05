@@ -6,8 +6,8 @@ const SearchField = () => {
 
     return(
         <div className="search-field">
-            <label for="search">Search:</label>
-            <input type="text" className="input-text" id="search" onChange={(e) => dispatch({ type: "SEARCH", payload: e.target.value.toLowerCase() })} />
+            <input required type="text" onChange={(e) => dispatch({ type: "SEARCH", payload: e.target.value.toLowerCase() })} />
+            <label>Search</label>
             <button className="btn blue">ADD NEW</button>
         </div>
     )

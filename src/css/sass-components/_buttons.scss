@@ -7,17 +7,14 @@
 	font-size:12px;
 	font-weight:bold;
 	padding:6px 12px;
-	text-decoration:none;
-  margin-left:auto; 
+  text-decoration:none;
+  margin-left: 5px;
   white-space: nowrap;
   &.blue{
-    box-shadow:inset 0px 1px 3px 0px #276873;
-    background-color:#599bb3; border:1px solid #29668f;
-    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-    text-shadow:0px -1px 0px #3d768a;
+    box-shadow:inset 0px 1px 3px 0px #67d1e4;
+    background-color:#2bb3e4;border: 0px;
     &:hover{
-      background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-      background-color:#408c99;
+      background-color:#1ecceb;
     }
   }
   &.red{
