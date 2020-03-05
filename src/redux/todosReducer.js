@@ -1,6 +1,6 @@
-export const usersReducer = (state = [], action) => {
+export const todosReducer = (state = [], action) => {
     switch (action.type){
-        case "GETUSERS":
+        case "GETTODOS":
             state = action.payload;
             return state;
         default:

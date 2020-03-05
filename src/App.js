@@ -1,26 +1,32 @@
 import React, { useEffect } from 'react';
-import SearchField from './components/searchField/SearchField';
+import { Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getUsers, getTodos } from './utils'
 
-import { useDispatch, useSelector } from 'react-redux';
-import { getUsers } from './utils'
+// Importing components
+import SearchField from './components/search-field/SearchField';
 import Users from './components/users/Users';
+import Todos from './components/todos/Todos';
 
 const App = () => {
   const dispatch = useDispatch();
-  const users = useSelector(state => state.users)
 
   const middlewhere = async () => {
-    let data = await getUsers()
-    dispatch({ type: "GETFROMSERVER", payload: data })
+    let users = await getUsers();
+    let todos = await getTodos();
+    dispatch({ type: "GETUSERS", payload: users })
+    dispatch({ type: "GETTODOS", payload: todos })
   }
 
   useEffect(() => {
     middlewhere()
   }, [])
+
   return (
     <div>
       <SearchField />
       <Users />
+      <Route path="/:id" component={Todos} />
     </div>
   )
 }
