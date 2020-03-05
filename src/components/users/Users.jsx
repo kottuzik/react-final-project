@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import User from '../user-card/UserCard';
+import User from './UserCard';
 
 const Users = () => {
     let search = useSelector(state => state.search);

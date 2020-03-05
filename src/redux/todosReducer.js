@@ -8,6 +8,14 @@ export const todosReducer = (state = [], action) => {
             let i = arr.findIndex(x => x.id === action.payload);
             arr[i].completed = true;
             return [...arr];
+        case "ADDTODO":
+            let todo = {
+                userId: action.payload.userId,
+                id: state.length,
+                title: action.payload.title,
+                completed: false
+            }
+            return [...state, todo]
         default:
             return state;
     }
