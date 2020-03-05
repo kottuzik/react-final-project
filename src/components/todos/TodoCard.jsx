@@ -13,7 +13,7 @@ const TodoCard = ({ todo }) => {
             <p className="text"><span className="bold">Title:</span> {todo.title}</p>
             <p className="text"><span className="bold">Status Completed:</span> {todo.completed.toString()}</p>
             
-            {todo.completed ? '' : <button className="btn dark-blue" onClick={markCompleted}>Mark Completed</button>}
+            {todo.completed ? '' : <button className="btn blue" onClick={markCompleted}>Mark Completed</button>}
         </div>
     )
 }

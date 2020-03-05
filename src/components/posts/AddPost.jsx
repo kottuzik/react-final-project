@@ -25,8 +25,8 @@ const AddPost = ({ userId, setShowAdd }) => {
                 Body: 
                 <input type="text" name="body" onChange={handleChange} />
             </label>
-                <button onClick={addTo}>Add</button>
-                <button onClick={() => setShowAdd(false)}>Cancel</button>
+                <button className="btn blue" onClick={addTo}>Add</button>
+                <button className="btn red" onClick={() => setShowAdd(false)}>Cancel</button>
             
         </div>
     )

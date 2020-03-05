@@ -15,12 +15,11 @@ const Posts = ({ id }) => {
         <div className="posts">
             {showAdd ? <AddPost userId={id} setShowAdd={setShowAdd} /> :
             <div>
-                <button onClick={() => setShowAdd(true)}>Add</button>
+                <button className="btn blue" onClick={() => setShowAdd(true)}>Add New Post</button>
                 {filterPosts.map(post => <PostCard key={post.id} post={post} />)}
             </div>
             }
         </div>
     )
 }
-
 export default Posts;

@@ -16,8 +16,8 @@ const AddTodo = ({ userId, setShowAdd }) => {
             <label>
                 Title: 
                 <input type="text" onChange={(e) => setTitle(e.target.value)} />
-                <button onClick={addTo}>Add</button>
-                <button onClick={() => setShowAdd(false)}>Cancel</button>
+                <button className="btn blue" onClick={addTo}>Add</button>
+                <button className="btn red" onClick={() => setShowAdd(false)}>Cancel</button>
             </label>
         </div>
     )
