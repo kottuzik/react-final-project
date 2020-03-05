@@ -11,15 +11,13 @@ const Todos = ({ id }) => {
     const user = users.find(user => user.id === id);
 
     let filterTodos = todos.filter(x => x.userId === id);
-    console.log("TODOS: " + todos);
-
     return(
         <div className="todos">
             {showAdd ? <AddTodo userId={id} setShowAdd={setShowAdd} /> : 
             <div>
                 <button className="btn blue" onClick={() => setShowAdd(true)}>Add</button>
 
-                    {/* <h1>{user.name} todos:</h1> */}
+                    <h1>{user.name} todos:</h1>
                     <h1>Name:</h1>
                 {filterTodos.map(todo => <TodoCard key={todo.id} todo={todo} />)}
             </div>
