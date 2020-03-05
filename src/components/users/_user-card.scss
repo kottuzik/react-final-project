@@ -4,12 +4,16 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 2px 5px rgb(209, 229, 255);
   margin-bottom: 12px;
+  cursor: pointer;
+  
   input {
     border: 0px;
   }
-  .navs{
-    display: flex; justify-content: space-between;
-  }
+}
+.navs{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 .first-user-details{
   display: flex; flex-direction: column;
@@ -19,7 +23,7 @@
 .other-data{
   display: flex; justify-content: space-between; flex-wrap: wrap; 
   align-items: flex-end;
-  border-top: 1px solid #bababa; margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid #ececec; margin-top: 8px; padding-top: 8px;
   .user-data{
     display: flex; flex-direction: column;
   }
