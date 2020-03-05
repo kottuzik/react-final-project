@@ -20,11 +20,14 @@ const AddPost = ({ userId, setShowAdd }) => {
             <label>
                 Title: 
                 <input type="text" name="title" onChange={handleChange} />
+            </label>
+            <label>
                 Body: 
                 <input type="text" name="body" onChange={handleChange} />
+            </label>
                 <button onClick={addTo}>Add</button>
                 <button onClick={() => setShowAdd(false)}>Cancel</button>
-            </label>
+            
         </div>
     )
 }

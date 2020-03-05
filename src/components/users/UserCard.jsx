@@ -15,21 +15,18 @@ const UserCard = ({ userData }) => {
             </div>
             <div className="navs">
                 <Link to={`/${id}`}>GO</Link>
-               <button  className="common-button blue" onMouseOver={() => setShowOrHide(true)}>Other Data</button>
+               <button  className="btn blue" onClick={() => setShowOrHide(!showOrHide)}>Other Data</button>
             </div>
 
-           <div
-            className={showOrHide ? "other-data" : "hide"}
-            onClick={() => setShowOrHide(false)}
-            >
+           <div className={showOrHide ? "other-data" : "hide"}>
                 <div className="user-data">
                     <label>Street: <input type="text" defaultValue={street} /></label>
                     <label>City: <input type="text" defaultValue={city} /></label>
                     <label>Zipcode: <input type="text" defaultValue={zipcode} /></label>
                 </div>
 
-                <button className="common-button blue">Update</button>
-                <button className="common-button red">Delete</button>
+                <button className="btn blue">Update</button>
+                <button className="btn red">Delete</button>
            </div>
 
         </div>

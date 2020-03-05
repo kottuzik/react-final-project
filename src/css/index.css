@@ -3,10 +3,13 @@
   padding: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #575757;
+  background-color: #f8f7ff;
 }
 
 .hide {
@@ -27,6 +30,9 @@ label {
 .main {
   margin-top: 12px;
   margin-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .left-side {
@@ -39,7 +45,7 @@ label {
   height: 22px;
 }
 
-.common-button {
+.btn {
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;
@@ -52,7 +58,7 @@ label {
   white-space: nowrap;
 }
 
-.common-button.blue {
+.btn.blue {
   -webkit-box-shadow: inset 0px 1px 3px 0px #276873;
           box-shadow: inset 0px 1px 3px 0px #276873;
   background-color: #599bb3;
@@ -62,13 +68,13 @@ label {
   text-shadow: 0px -1px 0px #3d768a;
 }
 
-.common-button.blue:hover {
+.btn.blue:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #408c99), to(#599bb3));
   background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
   background-color: #408c99;
 }
 
-.common-button.red {
+.btn.red {
   -webkit-box-shadow: inset 0px 1px 3px 0px #d12c2c;
           box-shadow: inset 0px 1px 3px 0px #d12c2c;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #9e2929), to(#bd3535));
@@ -77,7 +83,7 @@ label {
   border: 1px solid #b52424;
 }
 
-.common-button.red:hover {
+.btn.red:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #bd3535), to(#9e2929));
   background: linear-gradient(to bottom, #bd3535 5%, #9e2929 100%);
   background-color: #bd3535;
@@ -85,9 +91,16 @@ label {
 
 .user-card {
   padding: 12px;
-  border-radius: 3px;
-  border: 1px solid #bababa;
+  border-radius: 0px;
+  border: 1px solid #f1f5ff;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 5px #d1e5ff;
+          box-shadow: 0px 2px 5px #d1e5ff;
   margin-bottom: 12px;
+}
+
+.user-card input {
+  border: 0px;
 }
 
 .first-user-details {
