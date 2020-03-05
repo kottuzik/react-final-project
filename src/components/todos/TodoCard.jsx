@@ -9,10 +9,11 @@ const TodoCard = ({ todo }) => {
     }
 
     return(
-        <div className="todo-card">
-            <div className="text">Title: {todo.title}</div>
-            <div className="text">Completed: {todo.completed.toString()}</div>
-            {todo.completed ? '' : <button onClick={markCompleted}>Mark Completed</button>}
+        <div className="todo-card card">
+            <p className="text"><span className="bold">Title:</span> {todo.title}</p>
+            <p className="text"><span className="bold">Status Completed:</span> {todo.completed.toString()}</p>
+            
+            {todo.completed ? '' : <button className="btn dark-blue" onClick={markCompleted}>Mark Completed</button>}
         </div>
     )
 }

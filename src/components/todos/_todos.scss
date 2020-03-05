@@ -1,2 +1,8 @@
 //todos
-.todos{}
+.todo-card{
+  display: flex; flex-direction: column;
+  margin-top: 5px;
+  .text{
+    line-height: 24px; font-size:16rem;
+  }
+}
