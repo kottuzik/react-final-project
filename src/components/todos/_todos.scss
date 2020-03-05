@@ -2,6 +2,9 @@
 .todo-card{
   display: flex; flex-direction: column;
   margin-top: 5px;
+  .btn{
+    margin-left: auto;
+  }
   .text{
     line-height: 24px; font-size:16rem;
   }
