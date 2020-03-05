@@ -14,10 +14,11 @@ label{
     margin-right: 8px; margin-bottom: 8px;
 }
 .main{
+    display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;
     margin-top: 12px; margin-left: 12px;
 }
 .left-side{
-    max-width: 550px; padding-right: 12px; border-right: 1px solid #dadada;
+     padding-right: 20px; border-right: 1px solid #dadada;
 }
 
 .input-text{height: 22px;}

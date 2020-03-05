@@ -25,13 +25,17 @@ label {
 }
 
 .main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
   margin-top: 12px;
   margin-left: 12px;
 }
 
 .left-side {
-  max-width: 550px;
-  padding-right: 12px;
+  padding-right: 20px;
   border-right: 1px solid #dadada;
 }
 

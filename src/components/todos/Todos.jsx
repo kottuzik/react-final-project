@@ -14,7 +14,7 @@ const Todos = ({ id }) => {
         <div className="todos">
             {showAdd ? <AddTodo userId={id} setShowAdd={setShowAdd} /> : 
             <div>
-                <button onClick={() => setShowAdd(true)}>Add</button>
+                <button className="common-button blue" onClick={() => setShowAdd(true)}>Add</button>
                 {filterTodos.map(todo => <TodoCard key={todo.id} todo={todo} />)}
             </div>
             }
