@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+import TodoCard from './TodoCard';
+
 const Todos = () => {
     const { id } = useParams()
     const todos = useSelector(state => state.todos)
@@ -10,7 +12,7 @@ const Todos = () => {
 
     return(
         <div className="todos">
-            {filterTodos.map(todo => <div key={todo.id}>{todo.title}</div>)}
+            {filterTodos.map(todo => <TodoCard todo={todo} />)}
         </div>
     )
 }
