@@ -25,11 +25,13 @@ const App = () => {
   }, [])
 
   return (
-    <div>
-      <SearchField />
-      <Users />
+    <main className="main">
+      <div className="left-side">
+        <SearchField />
+        <Users />
+      </div>
       <Route path="/:id" component={UserPage} />
-    </div>
+    </main>
   )
 }
 

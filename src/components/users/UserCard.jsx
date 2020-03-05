@@ -8,21 +8,28 @@ const UserCard = ({ userData }) => {
 
     return(
         <div className="user-card">
-           <label>Name: <input type="text" defaultValue={name} /></label>
-           <label>Email: <input type="text" defaultValue={email} /></label>
-           <Link to={`/${id}`}>GO</Link>
-           <button onMouseOver={() => setShowOrHide(true)}>Other Data</button>
+
+            <div className="first-user-details">
+                <label>Name: <input type="text" defaultValue={name} /></label>
+                <label>Email: <input type="text" defaultValue={email} /></label>
+            </div>
+            <div className="navs">
+                <Link to={`/${id}`}>GO</Link>
+               <button  className="common-button blue" onMouseOver={() => setShowOrHide(true)}>Other Data</button>
+            </div>
 
            <div
             className={showOrHide ? "other-data" : "hide"}
             onClick={() => setShowOrHide(false)}
             >
-                <label>Street: <input type="text" defaultValue={street} /></label>
-                <label>City: <input type="text" defaultValue={city} /></label>
-                <label>Zipcode: <input type="text" defaultValue={zipcode} /></label>
+                <div className="user-data">
+                    <label>Street: <input type="text" defaultValue={street} /></label>
+                    <label>City: <input type="text" defaultValue={city} /></label>
+                    <label>Zipcode: <input type="text" defaultValue={zipcode} /></label>
+                </div>
 
-                <button>Update</button>
-                <button>Delete</button>
+                <button className="common-button blue">Update</button>
+                <button className="common-button red">Delete</button>
            </div>
 
         </div>
