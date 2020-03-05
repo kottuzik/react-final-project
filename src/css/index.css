@@ -99,8 +99,18 @@ label {
   margin-bottom: 12px;
 }
 
+<<<<<<< HEAD
 .user-card input {
   border: 0px;
+=======
+.user-card .navs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+>>>>>>> 08805620f2c45a6af62a811c604db67dfb991cc7
 }
 
 .first-user-details {
@@ -112,15 +122,6 @@ label {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 12px;
-}
-
-.navs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .other-data {
