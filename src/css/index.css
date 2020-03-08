@@ -27,6 +27,8 @@ body {
 
 .borderTop {
   border-top: 1px solid var(--common-border);
+  margin-top: 22px;
+  padding-top: 12px;
 }
 
 .card {
@@ -80,6 +82,12 @@ label {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media all and (max-width: 970px) {
+  .mobileHide {
+    display: none;
+  }
 }
 
 .btn {
@@ -237,6 +245,10 @@ label {
   font-weight: 700;
 }
 
+.todos .btn {
+  margin-bottom: 12px;
+}
+
 .todo-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,5 +382,9 @@ label {
 :root {
   --common-blue: #2bb3e4;
   --common-border: #d4f7fd;
+}
+
+.posts-title {
+  margin-bottom: 12px;
 }
 /*# sourceMappingURL=index.css.map */

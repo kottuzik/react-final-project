@@ -16,6 +16,8 @@ body{
 .bold{font-weight: 700;}
 .borderTop{
     border-top: 1px solid var(--common-border);
+    margin-top: 22px;
+    padding-top: 12px;
 }
 .card{  
     padding:12px; border-radius: 0px; border:1px solid #f1f5ff;
@@ -43,4 +45,10 @@ label{
 
 .flexWrap{
     display: flex; justify-content: space-between;
+}
+
+@media all and (max-width:970px){
+    .mobileHide{
+        display: none;
+    }
 }

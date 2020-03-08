@@ -10,7 +10,7 @@ const Users = () => {
     let filteredUsers = users.filter(user => user.name.toLowerCase().includes(search));
 
     return(
-        <section className="users-section b">
+        <section className="users-section borderTop">
             <h1>Users:</h1>
           {filteredUsers.map(user => (
               <User key={user.id} userData={user} />
@@ -18,5 +18,4 @@ const Users = () => {
         </section>
     )
 }
-
 export default Users;
