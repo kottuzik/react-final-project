@@ -9,7 +9,7 @@ import Posts from '../components/posts/Posts';
 const UserPage = () => {
     const { id } = useParams();
 
-    const users = useSelector(state => state.users);
+    const users = useSelector(state => state.users); 
     const user = users.find(user => user.id === parseInt(id));
 
     return(

@@ -5,7 +5,13 @@ import { Link } from 'react-router-dom'
 const UserCard = ({ userData }) => {
     const { id, name, email, street, city, zipcode } = userData ;
     const history = useHistory();
-    const [showOrHide, setShowOrHide] = useState(false)
+    const [showOrHide, setShowOrHide] = useState(false);
+    const [hideOnMobile, setHideOnMobile] = useState('users-section borderTop');   
+
+    const watchUser = (id) => {
+        history.push(id);
+        setHideOnMobile('users-section borderTop mobileHide');
+    }
 
     return(
         <div className="user-card card">
@@ -15,7 +21,9 @@ const UserCard = ({ userData }) => {
             </div>
             <div className="navs">
                <button  className="btn blue" onClick={() => setShowOrHide(!showOrHide)}>Other Data</button>
-               <button  className="btn blue" onClick={() => history.push(`/${id}`)}>Watch</button>
+               <button className="btn blue" onClick={() => watchUser(`/${id}`)}>
+                   Watch
+                </button>
             </div>
 
            <div className={showOrHide ? "other-data" : "hide"}>

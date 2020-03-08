@@ -9,9 +9,10 @@ const Todos = ({ id }) => {
     const todos = useSelector(state => state.todos)
     
     let filterTodos = todos.filter(x => x.userId === id);
-    
+    const users = useSelector(state => state.users);  
+    const user = users.find(user => user.id === parseInt(id));
     return(
-        <div className="todos">
+        <div className="todos borderTop">
             {showAdd ? <AddTodo userId={id} setShowAdd={setShowAdd} /> : 
             <div>
                 <button className="btn blue" onClick={() => setShowAdd(true)}>Add New Task</button>
