@@ -12,11 +12,16 @@ const Posts = ({ id }) => {
     let filterPosts = posts.filter(x => x.userId === id);
 
     return(
-        <div className="posts">
+        <div className="posts borderTop">
             {showAdd ? <AddPost userId={id} setShowAdd={setShowAdd} /> :
             <div>
+                <div className="flexWrap posts-title">
+                    <h2>Posts</h2>
                 <button className="btn blue" onClick={() => setShowAdd(true)}>Add New Post</button>
+                </div>
+                
                 {filterPosts.map(post => <PostCard key={post.id} post={post} />)}
+               
             </div>
             }
         </div>

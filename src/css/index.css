@@ -25,6 +25,10 @@ body {
   font-weight: 700;
 }
 
+.borderTop {
+  border-top: 1px solid var(--common-border);
+}
+
 .card {
   padding: 12px;
   border-radius: 0px;
@@ -62,11 +66,20 @@ label {
 
 .left-side {
   padding-right: 20px;
-  border-right: 1px solid #d4f7fd;
+  border-right: 1px solid var(--common-border);
 }
 
 .input-text {
   height: 22px;
+}
+
+.flexWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .btn {
@@ -85,7 +98,7 @@ label {
 .btn.blue {
   -webkit-box-shadow: inset 0px 1px 3px 0px #67d1e4;
           box-shadow: inset 0px 1px 3px 0px #67d1e4;
-  background-color: #2bb3e4;
+  background-color: var(--common-blue);
   border: 0px;
 }
 
@@ -189,7 +202,7 @@ label {
   width: 60%;
   position: relative;
   border-radius: 3px;
-  border: 1px solid #2bb3e4;
+  border: 1px solid var(--common-blue);
   padding-left: 6px;
 }
 
@@ -197,14 +210,14 @@ label {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   font-style: normal;
-  color: #2bb3e4;
+  color: var(--common-blue);
 }
 
 .search-field input:valid + label {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   font-style: normal;
-  color: #2bb3e4;
+  color: var(--common-blue);
 }
 
 .search-field label {
@@ -242,5 +255,128 @@ label {
 .todo-card .text {
   line-height: 24px;
   font-size: 16rem;
+}
+
+/*Loader*/
+.lds-default {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-default div {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--common-blue);
+  border-radius: 50%;
+  -webkit-animation: lds-default 1.2s linear infinite;
+          animation: lds-default 1.2s linear infinite;
+}
+
+.lds-default div:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  top: 37px;
+  left: 66px;
+}
+
+.lds-default div:nth-child(2) {
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+  top: 22px;
+  left: 62px;
+}
+
+.lds-default div:nth-child(3) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+  top: 11px;
+  left: 52px;
+}
+
+.lds-default div:nth-child(4) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+  top: 7px;
+  left: 37px;
+}
+
+.lds-default div:nth-child(5) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+  top: 11px;
+  left: 22px;
+}
+
+.lds-default div:nth-child(6) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+  top: 22px;
+  left: 11px;
+}
+
+.lds-default div:nth-child(7) {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+  top: 37px;
+  left: 7px;
+}
+
+.lds-default div:nth-child(8) {
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+  top: 52px;
+  left: 11px;
+}
+
+.lds-default div:nth-child(9) {
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+  top: 62px;
+  left: 22px;
+}
+
+.lds-default div:nth-child(10) {
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+  top: 66px;
+  left: 37px;
+}
+
+@-webkit-keyframes lds-default {
+  0%, 20%, 80%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes lds-default {
+  0%, 20%, 80%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+:root {
+  --common-blue: #2bb3e4;
+  --common-border: #d4f7fd;
+}
+
+.posts {
+  margin-top: 22px;
+}
+
+.posts-title {
+  margin: 12px 0;
 }
 /*# sourceMappingURL=index.css.map */

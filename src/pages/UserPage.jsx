@@ -16,12 +16,20 @@ const UserPage = () => {
         <div className="user-page">
             {user ?
             <div>
-                <h1>{user.name} Page</h1>
+                <h1>{user.name} ToDo List</h1>
                 <Todos id={parseInt(id)} />
                 <Posts id={parseInt(id)} />
             </div>
             :
-            <div className="loading">Loading...</div>
+            <div className="loading">
+                <p>Loading...</p>
+                <div className="lds-default">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
             }
         </div>
     )

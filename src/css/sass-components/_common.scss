@@ -1,4 +1,4 @@
-// Here all the common colors and mixing
+// Here all the common colors, styles and mixing
 html {font-size:1px;}
 *{
     margin: 0px; padding: 0px; box-sizing: border-box; outline: none;
@@ -14,6 +14,9 @@ body{
     display: none;
 }
 .bold{font-weight: 700;}
+.borderTop{
+    border-top: 1px solid var(--common-border);
+}
 .card{  
     padding:12px; border-radius: 0px; border:1px solid #f1f5ff;
     background-color: rgb(255, 255, 255);
@@ -33,7 +36,11 @@ label{
     margin-top: 30px; margin-left: 12px;
 }
 .left-side{
-     padding-right: 20px; border-right: 1px solid #d4f7fd;
+     padding-right: 20px; border-right: 1px solid var(--common-border);
 }
 
 .input-text{height: 22px;}
+
+.flexWrap{
+    display: flex; justify-content: space-between;
+}

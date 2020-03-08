@@ -12,7 +12,7 @@
   white-space: nowrap;
   &.blue{
     box-shadow:inset 0px 1px 3px 0px #67d1e4;
-    background-color:#2bb3e4;border: 0px;
+    background-color:var(--common-blue); border: 0px;
     &:hover{
       background-color:#1ecceb;
     }

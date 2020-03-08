@@ -1,7 +1,7 @@
 @mixin label {
   transform: translateY(-20px);
   font-style: normal;
-  color: #2bb3e4;
+  color: var(--common-blue);
 }
 
 .search-field{
@@ -13,7 +13,7 @@
     width: 60%;
     position: relative;
     border-radius: 3px;
-    border: 1px solid #2bb3e4;
+    border: 1px solid var(--common-blue);
     padding-left: 6px;
 
     &:focus + label{
