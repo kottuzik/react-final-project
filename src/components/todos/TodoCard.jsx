@@ -1,10 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { updateCompleted } from '../../utils';
 
 const TodoCard = ({ todo }) => {
     const dispatch = useDispatch();
 
     const markCompleted = () => {
+        updateCompleted(todo._id)
         dispatch({type: "MARKCOMP", payload: todo.id})
     }
 

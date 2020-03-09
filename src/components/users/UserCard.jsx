@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { deleteUser } from '../../utils';
+import { useDispatch } from 'react-redux';
 
 const UserCard = ({ userData }) => {
-    const { id, name, email, street, city, zipcode } = userData ;
+    const { _id, name, email, street, city, zipcode } = userData ;
     const history = useHistory();
     const [showOrHide, setShowOrHide] = useState(false);
     const [hideOnMobile, setHideOnMobile] = useState('users-section borderTop');   
+
+    const dispatch = useDispatch()
 
     const watchUser = (id) => {
         history.push(id);
         setHideOnMobile('users-section borderTop mobileHide');
     }
-
+    const handleDelete = (id) => {
+        deleteUser(id)
+        dispatch({type: "DELETEUSER", payload: id})
+    }
     return(
         <div className="user-card card">
             <div className="first-user-details">
@@ -21,7 +28,7 @@ const UserCard = ({ userData }) => {
             </div>
             <div className="navs">
                <button  className="btn blue" onClick={() => setShowOrHide(!showOrHide)}>Other Data</button>
-               <button className="btn blue" onClick={() => watchUser(`/${id}`)}>
+               <button className="btn blue" onClick={() => watchUser(`/${_id}`)}>
                    Watch
                 </button>
             </div>
@@ -34,7 +41,7 @@ const UserCard = ({ userData }) => {
                 </div>
                 <div className="navs">
                     <button className="btn blue">Update</button>
-                    <button className="btn red">Delete</button>
+                    <button className="btn red" onClick={() => handleDelete(_id)}>Delete</button>
                 </div>
            </div>
 

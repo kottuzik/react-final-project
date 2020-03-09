@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { postTodo } from '../../utils'
 
 const AddTodo = ({ userId, setShowAdd }) => {
     const [title, setTitle] = useState('');
@@ -7,6 +8,7 @@ const AddTodo = ({ userId, setShowAdd }) => {
     const dispatch = useDispatch();
 
     const addTo = () => {
+        postTodo({title: title, userId: userId});
         dispatch({ type: "ADDTODO", payload: {title: title, userId: userId} });
         setShowAdd(false);
     }

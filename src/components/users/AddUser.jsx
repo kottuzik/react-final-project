@@ -1,0 +1,52 @@
+import React, { useState } from 'react';
+import { postUser } from '../../utils';
+import { useDispatch } from 'react-redux';
+
+const AddUser = () => {
+    const [forms, setForms] = useState({
+        name: '',
+        email: '',
+        street: '',
+        city: '',
+        zipcode: ''
+    })
+    const dispatch = useDispatch()
+
+    const handleChange = (e) => {
+        setForms({...forms, [e.target.name]: e.target.value})
+    }
+
+    const handleSubmit = () => {
+        postUser(forms);
+        dispatch({type: "ADDUSER", payload: forms});
+    }
+
+    return(
+        <div className="add-user">
+               <label>
+                Name: 
+                <input type="text" name="name" onChange={handleChange} />
+            </label>
+            <label>
+                Email: 
+                <input type="text" name="email" onChange={handleChange} />
+            </label>
+            <label>
+                Street: 
+                <input type="text" name="street" onChange={handleChange} />
+            </label>
+            <label>
+                City: 
+                <input type="text" name="city" onChange={handleChange} />
+            </label>
+            <label>
+                Zipcode: 
+                <input type="text" name="zipcode" onChange={handleChange} />
+            </label>
+                <button className="btn blue" onClick={handleSubmit}>Add</button>
+                <button className="btn red">Cancel</button>
+        </div>
+    )
+}
+
+export default AddUser;

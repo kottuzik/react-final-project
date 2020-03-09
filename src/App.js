@@ -7,6 +7,7 @@ import { getUsers, getTodos, getPosts } from './utils'
 import SearchField from './components/search-field/SearchField';
 import Users from './components/users/Users';
 import UserPage from './pages/UserPage';
+import AddUser from './components/users/AddUser';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const App = () => {
     <main className="main">
       <div className="left-side">
         <SearchField />
+        <AddUser />
         <Users />
       </div>
       <Route path="/:id" component={UserPage} />

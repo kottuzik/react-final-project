@@ -20,7 +20,7 @@ const Posts = ({ id }) => {
                 <button className="btn blue" onClick={() => setShowAdd(true)}>Add New Post</button>
                 </div>
                 
-                {filterPosts.map(post => <PostCard key={post.id} post={post} />)}
+                {filterPosts.map(post => <PostCard key={post._id} post={post} />)}
                
             </div>
             }

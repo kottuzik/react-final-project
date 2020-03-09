@@ -10,15 +10,15 @@ const UserPage = () => {
     const { id } = useParams();
 
     const users = useSelector(state => state.users); 
-    const user = users.find(user => user.id === parseInt(id));
+    const user = users.find(user => user._id === id);
 
     return(
         <div className="user-page">
             {user ?
             <div>
                 <h1>{user.name} ToDo List</h1>
-                <Todos id={parseInt(id)} />
-                <Posts id={parseInt(id)} />
+                <Todos id={id} />
+                <Posts id={id} />
             </div>
             :
             <div className="loading">

@@ -3,6 +3,16 @@ export const usersReducer = (state = [], action) => {
         case "GETUSERS":
             state = action.payload;
             return state;
+
+        case "ADDUSER":
+            let arr = [...state, action.payload];
+            state = [...arr];
+            return state;
+        
+        case "DELETEUSER":
+            let afterDell = state.filter(x => x._id !== action.payload);
+            state = [...afterDell];
+            return state;
         default:
             return state;
     }

@@ -13,7 +13,7 @@ const Users = () => {
         <section className="users-section borderTop">
             <h1>Users:</h1>
           {filteredUsers.map(user => (
-              <User key={user.id} userData={user} />
+              <User key={user._id} userData={user} />
           ))}  
         </section>
     )

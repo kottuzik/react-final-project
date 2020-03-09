@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { postPost } from '../../utils'
 
 const AddPost = ({ userId, setShowAdd }) => {
     const [state, setState] = useState({ userId: userId, title: '', body: '' });
@@ -11,6 +12,7 @@ const AddPost = ({ userId, setShowAdd }) => {
     }
 
     const addTo = () => {
+        postPost(state);
         dispatch({ type: "ADDPOST", payload: state });
         setShowAdd(false);
     }
