@@ -11,7 +11,7 @@ const Users = () => {
 
     return(
         <section className="users-section borderTop">
-            <h1>Users:</h1>
+            <h1 className="title">Users:</h1>
           {filteredUsers.map(user => (
               <User key={user.id} userData={user} />
           ))}  
