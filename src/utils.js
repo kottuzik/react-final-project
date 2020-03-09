@@ -27,6 +27,10 @@ export const updateCompleted = (id) => {
     .catch(err => console.log(err));
 }
 
+export const deleteTodo = (id) =>{
+    axios.delete(`http://rest-api-fp.herokuapp.com/todos/${id}`);
+}
+
 // Post functions ->
 export const postPost = (obj) => {
     axios.post('http://rest-api-fp.herokuapp.com/posts', obj)

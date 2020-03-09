@@ -15,7 +15,12 @@ export const todosReducer = (state = [], action) => {
                 title: action.payload.title,
                 completed: false
             }
-            return [...state, todo]
+            return [...state, todo];
+            
+            case "DELETETODO":
+                let afterDell = state.filter(x => x._id !== action.payload);
+                state = [...afterDell];
+                return state;
         default:
             return state;
     }

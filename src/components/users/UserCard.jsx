@@ -41,7 +41,7 @@ const UserCard = ({ userData }) => {
                 </div>
                 <div className="navs">
                     <button className="btn blue">Update</button>
-                    <button className="btn red" onClick={() => handleDelete(_id)}>Delete</button>
+                    <button className="btn red" onClick={() => handleDelete(_id)}>Delete User</button>
                 </div>
            </div>
 

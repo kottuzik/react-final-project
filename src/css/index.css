@@ -295,10 +295,6 @@ label {
   margin-top: 5px;
 }
 
-.todo-card .btn {
-  margin-left: auto;
-}
-
 .todo-card .text {
   line-height: 24px;
   font-size: 16rem;
