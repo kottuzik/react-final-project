@@ -14,6 +14,15 @@
   margin-bottom: 12px;
 }
 
+.add-user{
+  display: flex; flex-direction: column; 
+  margin-top: 12px; border: 1px solid #dadada;
+  padding: 8px;
+  label{display: flex; justify-content: space-between;}
+  .buttons-div{
+    display: flex; justify-content: center;
+  }
+}
 .other-data{
   display: flex; justify-content: space-between; flex-wrap: wrap; 
   align-items: flex-end;

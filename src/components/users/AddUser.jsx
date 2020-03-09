@@ -43,8 +43,10 @@ const AddUser = () => {
                 Zipcode: 
                 <input type="text" name="zipcode" onChange={handleChange} />
             </label>
-                <button className="btn blue" onClick={handleSubmit}>Add</button>
-                <button className="btn red">Cancel</button>
+                <div className="buttons-div">
+                    <button className="btn blue" onClick={handleSubmit}>Add</button>
+                    <button className="btn red">Cancel</button>
+                </div>
         </div>
     )
 }
