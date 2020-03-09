@@ -16,7 +16,7 @@ const Posts = ({ id }) => {
             {showAdd ? <AddPost userId={id} setShowAdd={setShowAdd} /> :
             <div>
                 <div className="flexWrap posts-title">
-                    <h2>Posts</h2>
+                    <h2 className="title">Posts</h2>
                 <button className="btn blue" onClick={() => setShowAdd(true)}>Add New Post</button>
                 </div>
                 

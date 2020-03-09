@@ -16,7 +16,7 @@ const UserPage = () => {
         <div className="user-page">
             {user ?
             <div>
-                <h1>{user.name} ToDo List</h1>
+                <h1 className="title">{user.name} ToDo List</h1>
                 <Todos id={id} />
                 <Posts id={id} />
             </div>

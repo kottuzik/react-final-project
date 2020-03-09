@@ -46,7 +46,9 @@ label{
 .flexWrap{
     display: flex; justify-content: space-between;
 }
-
+.title{
+    margin-bottom: 12px;
+}
 @media all and (max-width:970px){
     .mobileHide{
         display: none;
