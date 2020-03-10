@@ -5,7 +5,7 @@ export const todosReducer = (state = [], action) => {
             return state;
         case "MARKCOMP":
             let arr = [...state];
-            let i = arr.findIndex(x => x.id === action.payload);
+            let i = arr.findIndex(x => x._id === action.payload);
             arr[i].completed = true;
             return [...arr];
         case "ADDTODO":
