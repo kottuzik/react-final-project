@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const apiAddress = 'http://rest-api-fp.herokuapp.com';
-const apiAddress = 'http://localhost:8000';
+const apiAddress = 'http://rest-api-fp.herokuapp.com';
+// const apiAddress = 'http://localhost:8000'; 
 
 // GET DATA
 export const getUsers = async () => {
