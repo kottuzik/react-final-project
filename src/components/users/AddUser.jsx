@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { postUser } from '../../utils';
 import { useDispatch } from 'react-redux';
+
 
 const AddUser = () => {
     const [forms, setForms] = useState({
@@ -20,12 +21,21 @@ const AddUser = () => {
         postUser(forms);
         dispatch({type: "ADDUSER", payload: forms});
     }
+ //   const inputRef = useRef(null);
+
+    const handleClearFields = (e) => {
+        e.preventDefault();
+      document.getElementById("addUserForm").reset();
+      
+        
+    }
 
     return(
         <div className="add-user">
-               <label>
+           <form id="addUserForm">
+           <label>
                 Name: 
-                <input type="text" name="name" onChange={handleChange} />
+                <input type="text" name="userName" onChange={handleChange} />
             </label>
             <label>
                 Email: 
@@ -45,8 +55,9 @@ const AddUser = () => {
             </label>
                 <div className="buttons-div">
                     <button className="btn blue" onClick={handleSubmit}>Add</button>
-                    <button className="btn red">Cancel</button>
+                    <button onClick={handleClearFields} className="btn red">Cancel</button>
                 </div>
+           </form>
         </div>
     )
 }
