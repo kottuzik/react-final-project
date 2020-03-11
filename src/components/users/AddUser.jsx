@@ -17,8 +17,8 @@ const AddUser = () => {
     }
 
     const handleSubmit = () => {
-        postUser(forms);
-        dispatch({type: "ADDUSER", payload: forms});
+        postUser(forms)
+        .then(user => dispatch({type: "ADDUSER", payload: user}));
     }
 
     return(

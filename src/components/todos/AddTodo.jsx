@@ -8,8 +8,8 @@ const AddTodo = ({ userId, setShowAdd }) => {
     const dispatch = useDispatch();
 
     const addTo = () => {
-        postTodo({title: title, userId: userId});
-        dispatch({ type: "ADDTODO", payload: {title: title, userId: userId} });
+        postTodo({title: title, userId: userId})
+        .then(todo => dispatch({ type: "ADDTODO", payload: todo }))
         setShowAdd(false);
     }
 

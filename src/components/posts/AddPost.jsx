@@ -12,8 +12,8 @@ const AddPost = ({ userId, setShowAdd }) => {
     }
 
     const addTo = () => {
-        postPost(state);
-        dispatch({ type: "ADDPOST", payload: state });
+        postPost(state)
+        .then(post => dispatch({ type: "ADDPOST", payload: post }));
         setShowAdd(false);
     }
 
