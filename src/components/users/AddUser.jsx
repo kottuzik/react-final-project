@@ -16,14 +16,16 @@ const AddUser = () => {
         setForms({...forms, [e.target.name]: e.target.value})
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        postUser(forms);
-        dispatch({type: "ADDUSER", payload: forms});
+    const handleSubmit = () => {
+        postUser(forms)
+        .then(user => dispatch({type: "ADDUSER", payload: user}));
     }
     const handleResetFields = (e) =>{
         e.preventDefault();
-        document.getElementById("addUserForm").reset();
+        // We *never* change the real DOM in react.
+        // Instead try to add value to each input and change this value
+        // via hooks.
+        // document.getElementById("addUserForm").reset(); 
     }
 
     return(

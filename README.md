@@ -1,14 +1,10 @@
 ## React Final Project!
 
-after you pull the project don't forget run the commend -npm install-
-I added the pdf of the project.
 
 ### Todo:
-- create SearchField component under the 'components' dir.
-- create User component ... - maybe we will need to break/spread this component to more parts. Because we need to add "more data"
-- Todos, and Posts component. I think they could be almost the same.
-- Add todo component.
-- Add new posts.
+- Create the "delete" post button. don't forget to add a function that will delete the post from the database, and from redux.
+- Reset inputs in "AddUser.jsx". I leaved there a comment.
+- GOOD LUCK!
 
 ### Things to solve:
 - In Users.jsx there is a problem with the filter. I puted there a message

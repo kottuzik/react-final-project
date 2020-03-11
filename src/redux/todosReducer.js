@@ -9,12 +9,7 @@ export const todosReducer = (state = [], action) => {
             arr[i].completed = true;
             return [...arr];
         case "ADDTODO":
-            let todo = {
-                userId: action.payload.userId,
-                id: state.length,
-                title: action.payload.title,
-                completed: false
-            }
+            let todo = action.payload;
             return [...state, todo];
             
             case "DELETETODO":

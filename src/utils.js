@@ -1,46 +1,57 @@
 import axios from 'axios';
 
+const apiAddress = 'http://rest-api-fp.herokuapp.com';
+// const apiAddress = 'http://localhost:8000'; 
+
 // GET DATA
 export const getUsers = async () => {
-    let usersResp = await axios.get('http://rest-api-fp.herokuapp.com/users');
+    let usersResp = await axios.get(`${apiAddress}/users`);
     return usersResp.data;
 }
 
 export const getTodos = async () => {
-    let todosResp = await axios.get('http://rest-api-fp.herokuapp.com/todos');
+    let todosResp = await axios.get(`${apiAddress}/todos`);
     return todosResp.data;
 }
 
 export const getPosts = async () => {
-    let posts = await axios.get('http://rest-api-fp.herokuapp.com/posts');
+    let posts = await axios.get(`${apiAddress}/posts`);
     return posts.data;
 }
 
 // Todo functions ->
 
-export const postTodo = (obj) => {
-    axios.post('http://rest-api-fp.herokuapp.com/todos', obj)
-    .catch(err => console.log(err))
+export const postTodo = async (obj) => {
+    try{
+        const todo = await axios.post(`${apiAddress}/todos`, obj);
+        return todo.data;
+    } catch (err) {
+        console.log(err);
+    }
 }
 export const updateCompleted = (id) => {
-    axios.patch(`http://rest-api-fp.herokuapp.com/todos/${id}`)
+    axios.patch(`${apiAddress}/todos/${id}`, { completed: true })
     .catch(err => console.log(err));
 }
-
 export const deleteTodo = (id) =>{
-    axios.delete(`http://rest-api-fp.herokuapp.com/todos/${id}`);
+    axios.delete(`${apiAddress}/todos/${id}`);
 }
 
 // Post functions ->
-export const postPost = (obj) => {
-    axios.post('http://rest-api-fp.herokuapp.com/posts', obj)
+export const postPost = async (obj) => {
+    let newPost = await axios.post(`${apiAddress}/posts`, obj);
+    return newPost.data;
 }
 
 
 // User functions ->
-export const postUser = (obj) => {
-    axios.post('http://rest-api-fp.herokuapp.com/users', obj);
+export const postUser = async (obj) => {
+    let newUser = await axios.post(`${apiAddress}/users`, obj)
+    return newUser.data;
 }
 export const deleteUser = (id) => {
-    axios.delete(`http://rest-api-fp.herokuapp.com/todos/${id}`);
+    axios.delete(`${apiAddress}/users/${id}`);
+    // delete all the user data todos and posts.
+    axios.delete(`${apiAddress}/todos/user/${id}`);
+    axios.delete(`${apiAddress}/posts/user/${id}`);
 }
