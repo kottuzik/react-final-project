@@ -173,6 +173,37 @@ label {
   margin-bottom: 12px;
 }
 
+.add-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 12px;
+  border: 1px solid #dadada;
+  padding: 8px;
+}
+
+.add-user label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.add-user .buttons-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .other-data {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,10 +293,6 @@ label {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 5px;
-}
-
-.todo-card .btn {
-  margin-left: auto;
 }
 
 .todo-card .text {

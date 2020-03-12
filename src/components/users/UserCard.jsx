@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 import { deleteUser } from '../../utils';
 import { useDispatch } from 'react-redux';
 
@@ -41,7 +40,7 @@ const UserCard = ({ userData }) => {
                 </div>
                 <div className="navs">
                     <button className="btn blue">Update</button>
-                    <button className="btn red" onClick={() => handleDelete(_id)}>Delete</button>
+                    <button className="btn red" onClick={() => handleDelete(_id)}>Delete User</button>
                 </div>
            </div>
 
