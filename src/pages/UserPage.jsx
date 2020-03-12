@@ -23,8 +23,7 @@ const UserPage = () => {
             :
             <div className="loading">
                 <p>Loading...</p>
-                <div className="lds-default">
-                    <div></div>
+                <div class="lds-ellipsis">
                     <div></div>
                     <div></div>
                     <div></div>
