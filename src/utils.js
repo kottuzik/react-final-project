@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const apiAddress = 'http://rest-api-fp.herokuapp.com';
-// const apiAddress = 'http://localhost:8000'; 
 
 // GET DATA
 export const getUsers = async () => {
@@ -41,6 +40,10 @@ export const deleteTodo = (id) =>{
 export const postPost = async (obj) => {
     let newPost = await axios.post(`${apiAddress}/posts`, obj);
     return newPost.data;
+}
+
+export const deletePost = (id) => {
+    axios.delete(`${apiAddress}/posts/${id}`);
 }
 
 

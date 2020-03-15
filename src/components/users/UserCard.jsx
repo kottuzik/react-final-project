@@ -7,13 +7,13 @@ const UserCard = ({ userData }) => {
     const { _id, name, email, street, city, zipcode } = userData ;
     const history = useHistory();
     const [showOrHide, setShowOrHide] = useState(false);
-    const [hideOnMobile, setHideOnMobile] = useState('users-section borderTop');   
+    //const [hideOnMobile, setHideOnMobile] = useState('users-section borderTop');   
 
     const dispatch = useDispatch()
 
     const watchUser = (id) => {
         history.push(id);
-        setHideOnMobile('users-section borderTop mobileHide');
+        //setHideOnMobile('users-section borderTop mobileHide');
     }
     const handleDelete = (id) => {
         deleteUser(id)

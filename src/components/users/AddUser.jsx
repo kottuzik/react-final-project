@@ -4,7 +4,8 @@ import { useDispatch } from 'react-redux';
 
 
 const AddUser = () => {
- 
+    
+    const dispatch = useDispatch();
 
     const [forms, setForms] = useState({
         name: '',
@@ -13,8 +14,6 @@ const AddUser = () => {
         city: '',
         zipcode: ''
     })
-
-    const dispatch = useDispatch()
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -35,8 +34,6 @@ const AddUser = () => {
             city: '',
             zipcode: ''
         })
-    
-       
     }
 
     return(

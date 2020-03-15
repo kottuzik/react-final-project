@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { postPost } from '../../utils'
 
-const AddPost = ({ userId, setShowAdd }) => {
+const AddPost = ({ userId, setShowAdd }) => { 
     const [state, setState] = useState({ userId: userId, title: '', body: '' });
 
     const dispatch = useDispatch();
