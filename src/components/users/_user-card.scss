@@ -1,4 +1,5 @@
 //user-card
+
 .user-card{
   input {
     border: 0px;
@@ -15,9 +16,12 @@
 }
 
 .add-user{
-  display: flex; flex-direction: column; 
-  margin-top: 12px; border: 1px solid #dadada;
-  padding: 8px;
+  padding-top: 16px;
+  .add-user-form{
+    display: flex; flex-direction: column; 
+    margin-top: 12px; border: 1px solid #dadada;
+    padding: 8px;
+  }
   label{display: flex; justify-content: space-between;}
   .buttons-div{
     display: flex; justify-content: center;
@@ -30,5 +34,4 @@
   .user-data{
     display: flex; flex-direction: column;
   }
-
 }

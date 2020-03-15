@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 
 const AddUser = () => {
-    
+    const [showOrHide, setShowOrHide] = useState(false);
     const dispatch = useDispatch();
 
     const [forms, setForms] = useState({
@@ -38,7 +38,8 @@ const AddUser = () => {
 
     return(
         <div className="add-user">
-            <form id="addUserForm">
+            <button className="btn blue"  onClick={() => setShowOrHide(!showOrHide)}>ADD NEW USER</button>
+            <form id="addUserForm" className={showOrHide ? "add-user-form" : "hide"}>
                 <label>
                     Name: 
                     <input type="text" name="name" value={forms.name} onChange={handleChange} />

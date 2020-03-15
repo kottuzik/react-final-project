@@ -7,7 +7,7 @@ const UserCard = ({ userData }) => {
     const { _id, name, email, street, city, zipcode } = userData ;
     const history = useHistory();
     const [showOrHide, setShowOrHide] = useState(false);
-    //const [hideOnMobile, setHideOnMobile] = useState('users-section borderTop');   
+    const [hideOnMobile, setHideOnMobile] = useState(false);   
 
     const dispatch = useDispatch()
 
@@ -32,7 +32,7 @@ const UserCard = ({ userData }) => {
                 </button>
             </div>
 
-           <div className={showOrHide ? "other-data" : "hide"}>
+           <div className={showOrHide ? "other-data" : "hide"}>   
                 <div className="user-data">
                     <label>Street: <input type="text" defaultValue={street} /></label>
                     <label>City: <input type="text" defaultValue={city} /></label>
