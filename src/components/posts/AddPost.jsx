@@ -18,7 +18,7 @@ const AddPost = ({ userId, setShowAdd }) => {
     }
 
     return(
-        <div className="add-post">
+        <div className="add-post flex">
             <label>
                 Title: 
                 <input type="text" name="title" onChange={handleChange} />
@@ -27,8 +27,10 @@ const AddPost = ({ userId, setShowAdd }) => {
                 Body: 
                 <input type="text" name="body" onChange={handleChange} />
             </label>
-                <button className="btn blue" onClick={addTo}>Add</button>
-                <button className="btn red" onClick={() => setShowAdd(false)}>Cancel</button>
+                <div className="navs">
+                    <button className="btn blue" onClick={addTo}>Add</button>
+                    <button className="btn red" onClick={() => setShowAdd(false)}>Cancel</button>
+                </div>
             
         </div>
     )

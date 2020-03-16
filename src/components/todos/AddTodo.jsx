@@ -14,13 +14,16 @@ const AddTodo = ({ userId, setShowAdd }) => {
     }
 
     return(
-        <div className="add-todo">
+        <div className="add-todo flex">
             <label>
                 Title: 
                 <input type="text" onChange={(e) => setTitle(e.target.value)} />
-                <button className="btn blue" onClick={addTo}>Add</button>
-                <button className="btn red" onClick={() => setShowAdd(false)}>Cancel</button>
             </label>
+               <div className="navs">
+                  <button className="btn blue" onClick={addTo}>Add</button>
+                  <button className="btn red" onClick={() => setShowAdd(false)}>Cancel</button>
+               </div>
+        
         </div>
     )
 }

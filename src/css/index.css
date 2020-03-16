@@ -82,6 +82,18 @@ label {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .title {
@@ -422,5 +434,9 @@ label {
 
 .posts-title {
   margin-bottom: 12px;
+}
+
+.add-post label {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=index.css.map */

@@ -44,7 +44,11 @@ label{
 .input-text{height: 22px;}
 
 .flexWrap{
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.flex{
+    display: flex;
+    align-items: flex-end;
 }
 .title{
     margin-bottom: 12px;
