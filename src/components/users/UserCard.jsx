@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
-import { deleteUser } from '../../utils';
+import { deleteUser, updateUser } from '../../utils';
 import { useDispatch } from 'react-redux';
 
 const UserCard = ({ userData }) => {
     const { _id, name, email, street, city, zipcode } = userData ;
     const history = useHistory();
     const [showOrHide, setShowOrHide] = useState(false);
-    const [hideOnMobile, setHideOnMobile] = useState(false);   
+    //const [hideOnMobile, setHideOnMobile] = useState(false);   
 
     const dispatch = useDispatch()
 
@@ -18,6 +18,11 @@ const UserCard = ({ userData }) => {
     const handleDelete = (id) => {
         deleteUser(id)
         dispatch({type: "DELETEUSER", payload: id})
+    }
+    const handleUpdate = (id) => { 
+        updateUser(userData)
+        dispatch({type: "UPDATEUSER", payload: id});
+       
     }
     return(
         <div className="user-card card">
@@ -39,7 +44,7 @@ const UserCard = ({ userData }) => {
                     <label>Zipcode: <input type="text" defaultValue={zipcode} /></label>
                 </div>
                 <div className="navs">
-                    <button className="btn blue">Update</button>
+                    <button className="btn blue" /* onClick={() => handleUpdate(_id)} */>Update</button>
                     <button className="btn red" onClick={() => handleDelete(_id)}>Delete User</button>
                 </div>
            </div>

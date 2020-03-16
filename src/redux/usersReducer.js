@@ -11,6 +11,10 @@ export const usersReducer = (state = [], action) => {
             let afterDell = state.filter(x => x._id !== action.payload);
             state = [...afterDell];
             return state;
+
+        case "UPDATEUSER":
+            return[...state, action.payload]
+
         case "RESETUSERDATA":
             let clearData = action.payload;
             return clearData;

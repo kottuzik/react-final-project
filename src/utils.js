@@ -52,6 +52,10 @@ export const postUser = async (obj) => {
     let newUser = await axios.post(`${apiAddress}/users`, obj)
     return newUser.data;
 }
+export const updateUser = (id) => {
+    axios.put(`${apiAddress}/user/${id}`);
+}
+
 export const deleteUser = (id) => {
     axios.delete(`${apiAddress}/users/${id}`);
     // delete all the user data todos and posts.

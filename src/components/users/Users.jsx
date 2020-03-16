@@ -7,7 +7,8 @@ const Users = () => {
     let search = useSelector(state => state.search);
     let users = useSelector(state => state.users)
 
-    let filteredUsers = users.filter(user => user.name.toLowerCase().includes(search));
+    let filteredUsers = users.filter(user => user.name.includes(search));
+    //let filteredUsers = users.filter(user => user.name.toLowerCase().includes(search));
 
     return(
         <section className="users-section borderTop">
