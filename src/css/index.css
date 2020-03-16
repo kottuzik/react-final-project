@@ -53,7 +53,6 @@ label {
   font-size: 18rem;
   font-weight: 700;
   margin-right: 8px;
-  margin-bottom: 8px;
 }
 
 .main {
@@ -162,6 +161,10 @@ label {
 
 .user-card input {
   border: 0px;
+}
+
+.user-card label {
+  margin-bottom: 8px;
 }
 
 .navs {
@@ -296,10 +299,6 @@ label {
   text-align: center;
   font-size: 35px;
   font-weight: 700;
-}
-
-.todos .btn {
-  margin-bottom: 12px;
 }
 
 .todo-card {

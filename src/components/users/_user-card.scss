@@ -1,14 +1,12 @@
 //user-card
 
 .user-card{
-  input {
-    border: 0px;
-  }
+  input {border: 0px;}
+  label{margin-bottom: 8px;}
 }
 .navs{
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  display: flex; justify-content: flex-end;
 }
 .first-user-details{
   display: flex; flex-direction: column;
