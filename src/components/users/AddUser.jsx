@@ -21,6 +21,7 @@ const AddUser = () => {
     }
 
     const handleSubmit = (e) => {
+        e.preventDefault();
         postUser(forms)
         .then(user => dispatch({type: "ADDUSER", payload: user}));
        
@@ -35,11 +36,16 @@ const AddUser = () => {
             zipcode: ''
         })
     }
+    const handleClose = (e) =>{
+        e.preventDefault();
+        setShowOrHide(!showOrHide);
+    }
 
     return(
         <div className="add-user">
             <button className="btn blue"  onClick={() => setShowOrHide(!showOrHide)}>ADD NEW USER</button>
             <form id="addUserForm" className={showOrHide ? "add-user-form" : "hide"}>
+                <button className="close" ariaLabel="close" onClick={handleClose}>&times;</button>
                 <label>
                     Name: 
                     <input type="text" name="name" value={forms.name} onChange={handleChange} />

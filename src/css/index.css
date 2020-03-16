@@ -159,6 +159,16 @@ label {
   background-color: #bd3535;
 }
 
+.close {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 20px;
+  width: 25px;
+  margin-bottom: 8px;
+  border: 0;
+  cursor: pointer;
+}
+
 .user-card input {
   border: 0px;
 }
@@ -212,6 +222,7 @@ label {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .add-user .buttons-div {
