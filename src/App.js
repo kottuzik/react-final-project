@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getUsers, getTodos, getPosts } from './utils'
 
 // Importing components
-import SearchField from './components/search-field/SearchField';
-import Users from './components/users/Users';
 import UserPage from './pages/UserPage';
-import AddUser from './components/users/AddUser';
+import Main from './pages/Main';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -27,12 +25,16 @@ const App = () => {
 
   return (
     <main className="main">
-      <div className="left-side">
-        <SearchField />
-        <AddUser />
-        <Users />
+      <div className="desktop">
+        <Route path="/" component={Main} />
+        <Route path="/:id" component={UserPage} />
       </div>
-      <Route path="/:id" component={UserPage} />
+      <div className="mobile">
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route path="/:id" component={UserPage} />
+        </Switch>
+      </div>
     </main>
   )
 }

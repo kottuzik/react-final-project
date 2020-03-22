@@ -15,12 +15,18 @@
 
 .add-user{
   padding-top: 16px;
-  .add-user-form{
-    display: flex; flex-direction: column; 
-    margin-top: 12px; border: 1px solid #dadada;
-    padding: 8px;
+  &-title{
+    font-size: 22px; font-weight: 700; padding: 0 10px;
   }
-  label{display: flex; justify-content: space-between; margin-bottom: 8px;}
+  .user-form{
+    display: flex;
+    margin-top: 12px; border: 1px solid #dadada;
+    padding: 8px 12px;
+    .close{margin-left: auto;}
+  }
+  label{
+    display: flex; justify-content: space-between; margin-bottom: 8px; margin-right: 0;
+  }
   .buttons-div{
     display: flex; justify-content: center;
   }

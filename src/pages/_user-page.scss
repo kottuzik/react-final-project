@@ -3,3 +3,11 @@
     font-size: 35px;
     font-weight: 700;
 }
+
+@media all and (max-width: 970px){
+    .desktop{display: none}
+    
+}
+@media all and (min-width: 971px){
+    .mobile{display: none}
+}

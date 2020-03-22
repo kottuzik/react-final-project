@@ -10,6 +10,9 @@ body{
     font-size: 16rem;
 
 }
+ul{
+    list-style: none;
+}
 .hide{
     display: none;
 }
@@ -33,9 +36,11 @@ label{
     font-size: 18rem; font-weight: 700; 
     margin-right: 8px;
 }
-.main{
-    display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;
-    margin-top: 30px; margin-left: 12px;
+.main .desktop{  
+    @media all and (min-width: 971px) {
+        display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;
+        margin-top: 30px; margin-left: 12px;   
+    }
 }
 .left-side{
      padding-right: 20px; border-right: 1px solid var(--common-border);

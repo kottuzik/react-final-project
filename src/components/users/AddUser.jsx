@@ -45,31 +45,49 @@ const AddUser = () => {
         <div className="add-user">
             <button className="btn blue"  onClick={() => setShowOrHide(!showOrHide)}>ADD NEW USER</button>
             <form id="addUserForm" className={showOrHide ? "add-user-form" : "hide"}>
+               <fieldset className="user-form">
+               <legend className="add-user-title">Fill the fields:</legend>
                 <button className="close" ariaLabel="close" onClick={handleClose}>&times;</button>
-                <label>
-                    Name: 
-                    <input type="text" name="name" value={forms.name} onChange={handleChange} />
-                </label>
-                <label>
-                    Email: 
-                    <input type="text" name="email" value={forms.email} onChange={handleChange} />
-                </label>
-                <label>
-                    Street: 
-                    <input type="text" name="street" value={forms.street} onChange={handleChange} />
-                </label>
-                <label>
-                    City: 
-                    <input type="text" name="city" value={forms.city} onChange={handleChange} />
-                </label>
-                <label>
-                    Zipcode: 
-                    <input type="text" name="zipcode" value={forms.zipcode} onChange={handleChange} />
-                </label>
-                <div className="buttons-div">
-                    <button className="btn blue" onClick={handleSubmit}>Add</button>
-                    <button className="btn red" onClick={handleResetFields}>Cancel</button>
-                </div>
+                    <ul className="form-list">
+                        <li className="form-item">
+                            <label>
+                                Name: 
+                                <input type="text" name="name" value={forms.name} onChange={handleChange} />
+                            </label>
+                        </li>
+                        <li className="form-item">
+                            <label>
+                                Email: 
+                                <input type="text" name="email" value={forms.email} onChange={handleChange} />
+                            </label>
+                        </li>
+                        <li className="form-item">
+                            <label>
+                                Street: 
+                                <input type="text" name="street" value={forms.street} onChange={handleChange} />
+                            </label>
+                        </li>
+                        <li className="form-item">
+                            <label>
+                                City: 
+                                <input type="text" name="city" value={forms.city} onChange={handleChange} />
+                            </label>
+                        </li>
+                        <li className="form-item">
+                            <label>
+                                Zipcode: 
+                                <input type="text" name="zipcode" value={forms.zipcode} onChange={handleChange} />
+                            </label>
+                        </li>
+                    </ul>                
+                    
+                
+                    
+                    <div className="buttons-div">
+                        <button className="btn blue" onClick={handleSubmit}>Add</button>
+                        <button className="btn red" onClick={handleResetFields}>Cancel</button>
+                    </div>
+               </fieldset>
             </form>
         </div>
     )

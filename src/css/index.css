@@ -17,6 +17,10 @@ body {
   font-size: 16rem;
 }
 
+ul {
+  list-style: none;
+}
+
 .hide {
   display: none;
 }
@@ -55,14 +59,16 @@ label {
   margin-right: 8px;
 }
 
-.main {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  margin-top: 30px;
-  margin-left: 12px;
+@media all and (min-width: 971px) {
+  .main .desktop {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 30px;
+    margin-left: 12px;
+  }
 }
 
 .left-side {
@@ -160,8 +166,6 @@ label {
 }
 
 .close {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   font-size: 20px;
   width: 25px;
   margin-bottom: 8px;
@@ -202,17 +206,23 @@ label {
   padding-top: 16px;
 }
 
-.add-user .add-user-form {
+.add-user-title {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+.add-user .user-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-top: 12px;
   border: 1px solid #dadada;
-  padding: 8px;
+  padding: 8px 12px;
+}
+
+.add-user .user-form .close {
+  margin-left: auto;
 }
 
 .add-user label {
@@ -223,6 +233,7 @@ label {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 8px;
+  margin-right: 0;
 }
 
 .add-user .buttons-div {
@@ -310,6 +321,18 @@ label {
   text-align: center;
   font-size: 35px;
   font-weight: 700;
+}
+
+@media all and (max-width: 970px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media all and (min-width: 971px) {
+  .mobile {
+    display: none;
+  }
 }
 
 .todo-card {
