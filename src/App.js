@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getUsers, getTodos, getPosts } from './utils'
 
@@ -30,6 +30,7 @@ const App = () => {
         <Route path="/:id" component={UserPage} />
       </div>
       <div className="mobile">
+      
         <Switch>
           <Route exact path="/" component={Main} />
           <Route path="/:id" component={UserPage} />

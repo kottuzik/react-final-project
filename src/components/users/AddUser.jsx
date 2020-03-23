@@ -80,9 +80,6 @@ const AddUser = () => {
                             </label>
                         </li>
                     </ul>                
-                    
-                
-                    
                     <div className="buttons-div">
                         <button className="btn blue" onClick={handleSubmit}>Add</button>
                         <button className="btn red" onClick={handleResetFields}>Cancel</button>
