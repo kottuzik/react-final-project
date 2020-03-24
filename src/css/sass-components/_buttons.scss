@@ -28,12 +28,22 @@
   }
   &.red{
     box-shadow:inset 0px 1px 3px 0px #d12c2c;
-    background:linear-gradient(to bottom, #9e2929 5%, #bd3535 100%);
-    background-color:#9e2929;
+    background:linear-gradient(to bottom, var(--common-red) 5%, #bd3535 100%);
+    background-color:var(--common-red);
     border:1px solid #b52424;
     &:hover{
-      background:linear-gradient(to bottom, #bd3535 5%, #9e2929 100%);
+      background:linear-gradient(to bottom, #bd3535 5%, var(--common-red) 100%);
       background-color:#bd3535;
+    }
+  }
+  &.light-red{
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+    background-color:#e4685d;
+    border:1px solid #ffffff;
+    display:inline-block;
+    
+    &:hover{
+      background-color:#eb675e;
     }
   }
 }

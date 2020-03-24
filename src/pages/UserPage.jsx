@@ -13,7 +13,7 @@ const UserPage = () => {
     const users = useSelector(state => state.users); 
     const user = users.find(user => user._id === id);
 
-    function BackLink ({ label, to}){
+    function BackLink ({ label, to }){
         let match = useRouteMatch({
             path: to
         });

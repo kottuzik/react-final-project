@@ -10,6 +10,12 @@ export const todosReducer = (state = [], action) => {
             arr[i].completed = true;
             return [...arr];
 
+        case "MARKINCOMPLETE":
+            let arrIncomplete = [...state];
+            let j = arrIncomplete.findIndex(x => x._id === action.payload);
+            arrIncomplete[j].completed = false;
+            return [...arrIncomplete];
+
         case "ADDTODO":
             let todo = action.payload;
             return [...state, todo];

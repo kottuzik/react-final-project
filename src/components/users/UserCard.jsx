@@ -25,6 +25,7 @@ const UserCard = ({ userData }) => {
 
     const watchUser = (id) => {
         history.push(id);
+        
     }
     const handleDelete = (id) => {
         deleteUser(id)

@@ -38,7 +38,7 @@ ul {
 .card {
   padding: 12px;
   border-radius: 0px;
-  border: 1px solid #f1f5ff;
+  border: 2px solid #f1f5ff;
   background-color: white;
   -webkit-box-shadow: 0px 2px 5px #d1e5ff;
           box-shadow: 0px 2px 5px #d1e5ff;
@@ -118,6 +118,10 @@ label {
   font-size: 20px;
 }
 
+.incompleted-style {
+  border: 2px solid var(--common-red);
+}
+
 @media all and (max-width: 970px) {
   .mobileHide {
     display: none;
@@ -176,16 +180,28 @@ label {
 .btn.red {
   -webkit-box-shadow: inset 0px 1px 3px 0px #d12c2c;
           box-shadow: inset 0px 1px 3px 0px #d12c2c;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #9e2929), to(#bd3535));
-  background: linear-gradient(to bottom, #9e2929 5%, #bd3535 100%);
-  background-color: #9e2929;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, var(--common-red)), to(#bd3535));
+  background: linear-gradient(to bottom, var(--common-red) 5%, #bd3535 100%);
+  background-color: var(--common-red);
   border: 1px solid #b52424;
 }
 
 .btn.red:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #bd3535), to(#9e2929));
-  background: linear-gradient(to bottom, #bd3535 5%, #9e2929 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #bd3535), to(var(--common-red)));
+  background: linear-gradient(to bottom, #bd3535 5%, var(--common-red) 100%);
   background-color: #bd3535;
+}
+
+.btn.light-red {
+  -webkit-box-shadow: inset 0px 39px 0px -24px #e67a73;
+          box-shadow: inset 0px 39px 0px -24px #e67a73;
+  background-color: #e4685d;
+  border: 1px solid #ffffff;
+  display: inline-block;
+}
+
+.btn.light-red:hover {
+  background-color: #eb675e;
 }
 
 .close {
@@ -489,6 +505,7 @@ label {
 :root {
   --common-blue: #2bb3e4;
   --common-border: #d4f7fd;
+  --common-red: #9e2929;
 }
 
 .posts-title {
