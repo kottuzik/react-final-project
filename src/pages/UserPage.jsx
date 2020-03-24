@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 // Importing Components
 import Todos from '../components/todos/Todos';
 import Posts from '../components/posts/Posts';
-import Loader from '../components/loader';
+import Loader from '../components/loader/loader';
 
 const UserPage = () => {
     const { id } = useParams();
