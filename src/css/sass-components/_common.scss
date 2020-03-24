@@ -55,20 +55,7 @@ label{
 .title{
     margin-bottom: 12px;
 }
-.back-link{
-    margin-bottom: 8px;
-   a{
-    text-decoration: none; display: inline;
-    font-size: 18px; color: var(--common-blue);
-    background-size: 1px 1em;
-    box-shadow:
-        inset 0 -0.175em white,
-        inset 0 -0.2em blue;
-    &:active{
-        font-size: 20px;
-    }
-   }
-}
+
 .incompleted-style{
     border: 2px solid var(--common-red);
 }

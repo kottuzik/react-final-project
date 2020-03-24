@@ -1,11 +1,12 @@
 // Here below bring all the components css
 @import './sass-components/common';
 @import './sass-components/buttons';
+@import './sass-components/variables';
 @import '../components/users/user-card';
 @import '../components/search-field/search-field';
 @import '../pages/user-page';
 @import '../components/loader/loader';
 @import '../components/todos/todos';
 @import '../components/todos/todo-card';
-@import './sass-components/variables';
 @import '../components/posts/posts';
+@import '../components/backLink/backLink';

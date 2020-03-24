@@ -1,11 +1,12 @@
 import React from 'react';
-import { useParams, Link, useRouteMatch, } from 'react-router-dom';
+import { useParams, } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 
 // Importing Components
 import Todos from '../components/todos/Todos';
 import Posts from '../components/posts/Posts';
 import Loader from '../components/loader/loader';
+import BackLink from '../components/backLink/backLink';
 
 const UserPage = () => {
     const { id } = useParams();
@@ -13,16 +14,7 @@ const UserPage = () => {
     const users = useSelector(state => state.users); 
     const user = users.find(user => user._id === id);
 
-    function BackLink ({ label, to }){
-        let match = useRouteMatch({
-            path: to
-        });
-        return(
-            <div className="back-link onlyMobile">
-                 <Link to={to}><span>&#8592;</span>{label}</Link>
-            </div>
-        )
-    }
+   
 
     return(      
             <div className="user-page">
