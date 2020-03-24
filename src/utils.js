@@ -58,3 +58,7 @@ export const deleteUser = (id) => {
     axios.delete(`${apiAddress}/todos/user/${id}`);
     axios.delete(`${apiAddress}/posts/user/${id}`);
 }
+
+export const userUpdate = async (id, obj) => {
+    let updatedUser = await axios.patch(`${apiAddress}/users/${id}`, obj)
+}

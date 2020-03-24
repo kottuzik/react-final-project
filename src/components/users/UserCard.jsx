@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
-import { deleteUser } from '../../utils';
+import { deleteUser, userUpdate } from '../../utils';
 import { useDispatch } from 'react-redux';
 
 const UserCard = ({ userData }) => {
@@ -32,7 +32,8 @@ const UserCard = ({ userData }) => {
     }
 
     const handleUpdate = () => {
-        dispatch({ type: 'UPDATEUSER', payload: form })
+        userUpdate(userData._id, form)
+        dispatch({ type: 'UPDATEUSER', payload: userData._id })
     }
     return(
         <div className="user-card card">
