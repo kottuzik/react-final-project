@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiAddress = 'http://rest-api-fp.herokuapp.com';
+const apiAddress = 'https://rest-api-fp.herokuapp.com';
 
 // GET DATA
 export const getUsers = async () => {
