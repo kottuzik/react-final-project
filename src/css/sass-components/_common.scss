@@ -59,6 +59,10 @@ label{
 .incompleted-style{
     border: 2px solid var(--common-red);
 }
+.current-card{
+    border: 2px solid var(--common-blue);
+    background-color: green($color: #000000);
+}
 @media all and (max-width:970px){
     .mobileHide{
         display: none;

@@ -3,11 +3,11 @@ import { useHistory } from 'react-router-dom'
 import { deleteUser, userUpdate } from '../../utils';
 import { useDispatch } from 'react-redux';
 
-const UserCard = ({ userData }) => {
+const UserCard = ({ userData, active, setActiveCard }) => {
     const { _id, name, email, street, city, zipcode } = userData ;
     const history = useHistory();
     const [showOrHide, setShowOrHide] = useState(false);
-
+   
     const [form, setForm] = useState({
         _id: _id,
         name: name,
@@ -24,9 +24,11 @@ const UserCard = ({ userData }) => {
     const dispatch = useDispatch()
 
     const watchUser = (id) => {
-        history.push(id);
-        
+        history.push(`/${id}`);
+        let arrCurrent = [];
+        setActiveCard(id); 
     }
+    
     const handleDelete = (id) => {
         deleteUser(id)
         dispatch({type: "DELETEUSER", payload: id})
@@ -37,14 +39,14 @@ const UserCard = ({ userData }) => {
         dispatch({ type: 'UPDATEUSER', payload: userData._id })
     }
     return(
-        <div className="user-card card">
+        <div className={active ? "user-card card current-card" : "user-card card "}>
             <div className="first-user-details">
                 <label>Name: <input name="name" type="text" defaultValue={name} onChange={handleChange} /></label>
                 <label>Email: <input name="email" type="text" defaultValue={email} onChange={handleChange}/></label>
             </div>
             <div className="navs">
                <button  className="btn blue" onClick={() => setShowOrHide(!showOrHide)}>Other Data</button>
-               <button className="btn blue" onClick={() => watchUser(`/${_id}`)}>
+               <button className="btn blue" onClick={() => watchUser(_id)}>
                    Watch
                 </button>
             </div>

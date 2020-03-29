@@ -104,6 +104,10 @@ label {
   border: 2px solid var(--common-red);
 }
 
+.current-card {
+  border: 2px solid var(--common-blue);
+}
+
 @media all and (max-width: 970px) {
   .mobileHide {
     display: none;

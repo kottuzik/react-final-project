@@ -14,8 +14,6 @@ const UserPage = () => {
     const users = useSelector(state => state.users); 
     const user = users.find(user => user._id === id);
 
-   
-
     return(      
             <div className="user-page">
             <BackLink
