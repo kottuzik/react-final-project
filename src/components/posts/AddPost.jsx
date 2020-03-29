@@ -24,7 +24,7 @@ const AddPost = ({ userId, setShowAdd }) => {
                 <input type="text" name="title" onChange={handleChange} />
             </label>
             <label>
-                Body: 
+               Body:
                 <input type="text" name="body" onChange={handleChange} />
             </label>
                 <div className="navs">

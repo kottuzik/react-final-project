@@ -6,8 +6,9 @@ import User from './UserCard';
 const Users = () => {
     let search = useSelector(state => state.search);
     let users = useSelector(state => state.users)
-   
+
     const [activeCard, setActiveCard] = useState(false);
+    
     let filteredUsers = users.filter(user => user.name.toLowerCase().includes(search));
 
     return(

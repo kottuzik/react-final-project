@@ -106,11 +106,31 @@ label {
 
 .current-card {
   border: 2px solid var(--common-blue);
+  background-color: 0;
 }
 
 @media all and (max-width: 970px) {
   .mobileHide {
     display: none;
+  }
+  .flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .flex input {
+    margin-left: 8px;
+  }
+}
+
+@media all and (max-width: 620px) {
+  .flex label {
+    margin-bottom: 8px;
+  }
+}
+
+@media all and (min-width: 621px) {
+  .flex label {
+    margin-bottom: 0;
   }
 }
 
@@ -496,10 +516,6 @@ label {
 
 .posts-title {
   margin-bottom: 12px;
-}
-
-.add-post label {
-  margin-bottom: 0;
 }
 
 .back-link {
