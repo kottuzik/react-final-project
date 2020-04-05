@@ -20,10 +20,10 @@ export const getPosts = async () => {
 
 // Todo functions ->
 
-export const postTodo = async (obj) => {
+export const postTodo = async (obj, dispatch) => {
     try{
         const todo = await axios.post(`${apiAddress}/todos`, obj);
-        return todo.data;
+        dispatch({ type: "ADDTODO", payload: todo.data });
     } catch (err) {
         console.log(err);
     }
@@ -40,20 +40,25 @@ export const deleteTodo = (id) =>{
 }
 
 // Post functions ->
-export const postPost = async (obj) => {
+export const postPost = async (obj, dispatch) => {
     let newPost = await axios.post(`${apiAddress}/posts`, obj);
-    return newPost.data;
+    if(newPost){
+        dispatch({ type: "ADDPOST", payload: newPost.data });  
+    }
 }
 
 export const deletePost = (id) => {
     axios.delete(`${apiAddress}/posts/${id}`);
 }
 
-
 // User functions ->
-export const postUser = async (obj) => {
+export const postUser = async (obj, dispatch) => {
     let newUser = await axios.post(`${apiAddress}/users`, obj)
-    return newUser.data;
+    if(newUser){
+        dispatch({type: "ADDUSER", payload: newUser.data});
+    }
+
+    
 }
 export const deleteUser = (id) => {
     axios.delete(`${apiAddress}/users/${id}`);

@@ -109,6 +109,44 @@ label {
   background-color: 0;
 }
 
+.message {
+  margin-top: 8px;
+  padding: 8px 0 8px 12px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.message::before {
+  content: '';
+  margin-right: 12px;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.message.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+}
+
+.message.success::before {
+  content: '\2713';
+  background: #4F8A10;
+}
+
+.message.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.message.error::before {
+  content: '\00D7';
+  background: #D8000C;
+}
+
 @media all and (max-width: 970px) {
   .mobileHide {
     display: none;

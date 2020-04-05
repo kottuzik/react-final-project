@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 
 const AddUser = () => {
     const [showOrHide, setShowOrHide] = useState(false);
+    const[addUserSuccess, setAddUserSuccess] = useState(false);
     const dispatch = useDispatch();
 
     const [forms, setForms] = useState({
@@ -22,9 +23,12 @@ const AddUser = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        postUser(forms)
-        .then(user => dispatch({type: "ADDUSER", payload: user}));
-       
+        postUser(forms, dispatch)
+        setAddUserSuccess(!addUserSuccess);
+
+        setTimeout(() =>{
+            setAddUserSuccess(false);
+        }, 1500)
     }
     const handleResetFields = (e) =>{
         e.preventDefault();
@@ -47,7 +51,7 @@ const AddUser = () => {
             <form id="addUserForm" className={showOrHide ? "add-user-form" : "hide"}>
                <fieldset className="user-form">
                <legend className="add-user-title">Fill the fields:</legend>
-                <button className="close" ariaLabel="close" onClick={handleClose}>&times;</button>
+                <button className="close" aria-label={"close"} onClick={handleClose}>&times;</button>
                     <ul className="form-list">
                         <li className="form-item">
                             <label>
@@ -84,6 +88,9 @@ const AddUser = () => {
                         <button className="btn blue" onClick={handleSubmit}>Add</button>
                         <button className="btn red" onClick={handleResetFields}>Cancel</button>
                     </div>
+                    <p className={addUserSuccess ? "message success" : "hide"}>
+                        The User Added
+                    </p>
                </fieldset>
             </form>
         </div>

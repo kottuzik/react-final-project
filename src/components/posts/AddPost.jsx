@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { postPost } from '../../utils'
 
+
+
 const AddPost = ({ userId, setShowAdd }) => { 
     const [state, setState] = useState({ userId: userId, title: '', body: '' });
+    const [postSuccess, setPostSuccess] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -12,27 +15,36 @@ const AddPost = ({ userId, setShowAdd }) => {
     }
 
     const addTo = () => {
-        postPost(state)
-        .then(post => dispatch({ type: "ADDPOST", payload: post }));
-        setShowAdd(false);
+        postPost(state, dispatch);
+        setPostSuccess(!postSuccess);
+       
+        setTimeout(() =>{
+            setShowAdd(false);
+        }, 1000)
     }
 
     return(
-        <div className="add-post flex">
-            <label>
-                Title: 
-                <input type="text" name="title" onChange={handleChange} />
-            </label>
-            <label>
-               Body:
-                <input type="text" name="body" onChange={handleChange} />
-            </label>
-                <div className="navs">
-                    <button className="btn blue" onClick={addTo}>Add</button>
-                    <button className="btn red" onClick={() => setShowAdd(false)}>Cancel</button>
-                </div>
-            
-        </div>
+        <React.Fragment>
+            <div className="add-post flex">
+                <label>
+                    Title: 
+                    <input type="text" name="title" onChange={handleChange} />
+                </label>
+                <label>
+                Body:
+                    <input type="text" name="body" onChange={handleChange} />
+                </label>
+                    <div className="navs">
+                        <button className="btn blue" onClick={addTo}>
+                            Add
+                        </button>
+                        <button className="btn red" onClick={() => setShowAdd(false)}>
+                            Cancel
+                        </button>
+                    </div>            
+            </div>
+            <p className={postSuccess ? "message success" : "hide"}>Your Post Added</p>
+        </React.Fragment>
     )
 }
 

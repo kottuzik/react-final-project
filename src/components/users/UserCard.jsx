@@ -45,7 +45,9 @@ const UserCard = ({ userData, active, setActiveCard }) => {
                 <label>Email: <input name="email" type="text" defaultValue={email} onChange={handleChange}/></label>
             </div>
             <div className="navs">
-               <button  className="btn blue" onClick={() => setShowOrHide(!showOrHide)}>Other Data</button>
+               <button  className="btn blue" onClick={() => setShowOrHide(!showOrHide)}>
+                   Other Data
+                </button>
                <button className="btn blue" onClick={() => watchUser(_id)}>
                    Watch
                 </button>

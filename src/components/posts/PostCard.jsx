@@ -15,7 +15,7 @@ const PostCard = ({ post }) => {
         <p className="text"><span className="bold">Title:</span> {post.title}</p>
         <p className="text"><span className="bold">body:</span> {post.body}</p>
         <div className="navs">
-            <button className="btn red" onClick={handleDeletePost}>Delete Task</button>
+            <button className="btn red" onClick={handleDeletePost}>Delete Post</button>
         </div>
     </div>
   )

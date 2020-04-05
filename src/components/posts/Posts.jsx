@@ -6,6 +6,8 @@ import AddPost from './AddPost';
 
 const Posts = ({ id }) => {
     const [showAdd, setShowAdd] = useState(false);
+   
+
 
     const posts = useSelector(state => state.posts)
 
@@ -13,7 +15,8 @@ const Posts = ({ id }) => {
 
     return(
         <div className="posts borderTop">
-            {showAdd ? <AddPost userId={id} setShowAdd={setShowAdd} /> :
+            {showAdd ? <AddPost userId={id} setShowAdd={setShowAdd} 
+            /* setPostSuccess={setPostSuccess} *//> :
             <div>
                 <div className="flexWrap posts-title">
                     <h2 className="title">Posts</h2>
