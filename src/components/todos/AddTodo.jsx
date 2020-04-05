@@ -4,15 +4,17 @@ import { postTodo } from '../../utils'
 
 const AddTodo = ({ userId, setShowAdd }) => {
     const [title, setTitle] = useState('');
-    const [addTodoSucces, setAddTodoSucces] = useState(false);
+    const [addTodoSucces, setAddTodoSucces] = useState('hide');
     const dispatch = useDispatch();
 
     const addTo = () => {
         postTodo({title: title, userId: userId}, dispatch)
-        setAddTodoSucces(!addTodoSucces);
-        setTimeout(() =>{
-            setShowAdd(false);
-        }, 1500)
+        .then(message => {
+            setAddTodoSucces(message)
+            setTimeout(() =>{
+                setShowAdd(false);
+            }, 2500)
+        })
     }
 
     return(
@@ -27,7 +29,7 @@ const AddTodo = ({ userId, setShowAdd }) => {
                     <button className="btn red" onClick={() => setShowAdd(false)}>Cancel</button>
                 </div>
             </div>
-            <p className={addTodoSucces ? "message success" : "hide"}>Your Task Added</p>
+            <p className={addTodoSucces}>Your Task Added</p>
         </React.Fragment>
     )
 }

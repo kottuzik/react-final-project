@@ -23,9 +23,10 @@ export const getPosts = async () => {
 export const postTodo = async (obj, dispatch) => {
     try{
         const todo = await axios.post(`${apiAddress}/todos`, obj);
-        dispatch({ type: "ADDTODO", payload: todo.data });
+        await dispatch({ type: "ADDTODO", payload: todo.data });
+        return 'message success'
     } catch (err) {
-        console.log(err);
+        return 'message wrong'
     }
 }
 export const updateCompleted = (id) => {
