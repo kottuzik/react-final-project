@@ -6,7 +6,7 @@ import { postPost } from '../../utils'
 
 const AddPost = ({ userId, setShowAdd }) => { 
     const [state, setState] = useState({ userId: userId, title: '', body: '' });
-    const [postSuccess, setPostSuccess] = useState(false);
+    const [postSuccess, setPostSuccess] = useState('hide');
 
     const dispatch = useDispatch();
 
@@ -15,12 +15,13 @@ const AddPost = ({ userId, setShowAdd }) => {
     }
 
     const addTo = () => {
-        postPost(state, dispatch);
-        setPostSuccess(!postSuccess);
-       
-        setTimeout(() =>{
-            setShowAdd(false);
-        }, 1000)
+        postPost(state, dispatch)
+        .then(message =>{
+            setPostSuccess(message)     
+            setTimeout(() =>{
+                setShowAdd(false);
+            }, 1500)
+        })
     }
 
     return(
@@ -43,7 +44,7 @@ const AddPost = ({ userId, setShowAdd }) => {
                         </button>
                     </div>            
             </div>
-            <p className={postSuccess ? "message success" : "hide"}>Your Post Added</p>
+            <p className={postSuccess.cssClass}>{postSuccess.title}</p>
         </React.Fragment>
     )
 }

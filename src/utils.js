@@ -24,11 +24,17 @@ export const postTodo = async (obj, dispatch) => {
     try{
         const todo = await axios.post(`${apiAddress}/todos`, obj);
         await dispatch({ type: "ADDTODO", payload: todo.data });
-        return 'message success'
-    } catch (err) {
-        return 'message wrong'
+        return {
+             title: 'Your Task Added',
+             cssClass: 'message success'
+        }
+        } catch (err) {
+            return {
+                title: 'There is an error',
+                cssClass: 'message error'
+            }
+        }
     }
-}
 export const updateCompleted = (id) => {
     axios.patch(`${apiAddress}/todos/${id}`, { completed: true })
     .catch(err => console.log(err));
@@ -42,10 +48,19 @@ export const deleteTodo = (id) =>{
 
 // Post functions ->
 export const postPost = async (obj, dispatch) => {
-    let newPost = await axios.post(`${apiAddress}/posts`, obj);
-    if(newPost){
-        dispatch({ type: "ADDPOST", payload: newPost.data });  
-    }
+    try{
+        let newPost = await axios.post(`${apiAddress}/posts`, obj);
+        await dispatch({ type: "ADDPOST", payload: newPost.data });  
+        return{
+            title: 'Your post added',
+            cssClass: 'message success'
+        }
+    }catch(err){
+        return {
+            title: 'There is an error',
+            cssClass: 'message error'
+        }
+    }   
 }
 
 export const deletePost = (id) => {
@@ -54,12 +69,20 @@ export const deletePost = (id) => {
 
 // User functions ->
 export const postUser = async (obj, dispatch) => {
-    let newUser = await axios.post(`${apiAddress}/users`, obj)
-    if(newUser){
-        dispatch({type: "ADDUSER", payload: newUser.data});
+    try{
+        let newUser = await axios.post(`${apiAddress}/users`, obj)
+        await dispatch({type: "ADDUSER", payload: newUser.data});
+        return{
+            title: 'The user added succesfully',
+            cssClass: 'message success'
+        }
+    }catch(err){
+        return {
+            title: 'There is an error',
+            cssClass: 'message error'
+        }
     }
-
-    
+        
 }
 export const deleteUser = (id) => {
     axios.delete(`${apiAddress}/users/${id}`);
