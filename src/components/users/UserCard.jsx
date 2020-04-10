@@ -25,7 +25,6 @@ const UserCard = ({ userData, active, setActiveCard }) => {
 
     const watchUser = (id) => {
         history.push(`/${id}`);
-        let arrCurrent = [];
         setActiveCard(id); 
     }
     
