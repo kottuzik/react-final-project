@@ -27,11 +27,17 @@ const AddUser = () => {
         .then(message =>{
             setAddUserSuccess(message)
             setTimeout(() =>{
+                setForms({
+                    name: '',
+                    email: '',
+                    street: '',
+                    city: '',
+                    zipcode: ''
+                });
+                setAddUserSuccess('hide');
                 setShowOrHide(false);
             }, 1500)
         })
-
-        
     }
     const handleResetFields = (e) =>{
         e.preventDefault();

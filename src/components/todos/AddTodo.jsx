@@ -14,7 +14,7 @@ const AddTodo = ({ userId, setShowAdd }) => {
             setAddTodoSuccess(message)
             setTimeout(() =>{
                 setShowAdd(false);
-            }, 2500)
+            }, 2500) 
         })
     }
 
