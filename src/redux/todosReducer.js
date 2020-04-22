@@ -2,7 +2,7 @@ export const todosReducer = (state = [], action) => {
     switch (action.type){
         case "GETTODOS":
             state = action.payload;
-            return state;
+            return state; 
             
         case "MARKCOMP":
             let arr = [...state];

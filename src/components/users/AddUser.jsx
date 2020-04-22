@@ -88,8 +88,12 @@ const AddUser = () => {
                         </li>
                     </ul>                
                     <div className="buttons-div">
-                        <button className="btn blue" onClick={handleSubmit}>Add</button>
-                        <button className="btn red" onClick={handleResetFields}>Cancel</button>
+                        <button className="btn blue" onClick={handleSubmit}>
+                            Add
+                        </button>
+                        <button className="btn green" onClick={handleResetFields}>
+                            Clear
+                        </button>
                     </div>
                     <p className={addUserSuccess.cssClass}>
                         {addUserSuccess.title}

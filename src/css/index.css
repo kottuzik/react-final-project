@@ -193,13 +193,13 @@ label {
   text-decoration: none;
   margin-left: 5px;
   white-space: nowrap;
+  border: 0;
 }
 
 .btn.blue {
   -webkit-box-shadow: inset 0px 1px 3px 0px #67d1e4;
           box-shadow: inset 0px 1px 3px 0px #67d1e4;
   background-color: var(--common-blue);
-  border: 0px;
 }
 
 .btn.blue:hover {
@@ -246,6 +246,12 @@ label {
 
 .btn.light-red:hover {
   background-color: #eb675e;
+}
+
+.btn.green {
+  -webkit-box-shadow: inset 0px 1px 3px 0px #77b55a;
+          box-shadow: inset 0px 1px 3px 0px #77b55a;
+  background-color: #72b352;
 }
 
 .close {

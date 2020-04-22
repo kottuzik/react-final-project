@@ -10,9 +10,10 @@
   text-decoration:none;
   margin-left: 5px;
   white-space: nowrap;
+  border: 0;
   &.blue{
     box-shadow:inset 0px 1px 3px 0px #67d1e4;
-    background-color:var(--common-blue); border: 0px;
+    background-color:var(--common-blue);
     &:hover{
       background-color:#1ecceb;
     }
@@ -45,6 +46,13 @@
     &:hover{
       background-color:#eb675e;
     }
+  }
+  &.green{
+    
+    box-shadow:inset 0px 1px 3px 0px #77b55a;
+    background-color:#72b352;
+    
+    
   }
 }
 

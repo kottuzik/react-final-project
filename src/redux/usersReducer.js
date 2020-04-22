@@ -12,11 +12,11 @@ export const usersReducer = (state = [], action) => {
             state = [...afterDell];
             return state;
 
-        case "UPDATEUSER":
-            let updatedUsers = [...state];
-            let i = updatedUsers.findIndex(x => x._id === action.payload._id);
-            updatedUsers[i] = {...action.payload}
-            return [...updatedUsers];
+            case "UPDATEUSER":
+                let updatedUsers = [...state];
+                let i = updatedUsers.findIndex(x => x._id === action.payload._id);
+                updatedUsers[i] = {...action.payload}
+                return [...updatedUsers];
         default:
             return state;
     }

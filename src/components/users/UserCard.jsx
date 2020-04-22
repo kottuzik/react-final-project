@@ -59,8 +59,12 @@ const UserCard = ({ userData, active, setActiveCard }) => {
                     <label>Zipcode: <input name="zipcode" type="text" defaultValue={zipcode} onChange={handleChange} /></label>
                 </div>
                 <div className="navs">
-                    <button className="btn blue" onClick={() => handleUpdate()}>Update</button>
-                    <button className="btn red" onClick={() => handleDelete(_id)}>Delete User</button>
+                    <button className="btn blue" onClick={() => handleUpdate()}>
+                        Update
+                    </button>
+                    <button className="btn red" onClick={() => handleDelete(_id)}>
+                        Delete User
+                    </button>
                 </div>
            </div>
 
