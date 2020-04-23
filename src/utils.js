@@ -2,6 +2,16 @@ import axios from 'axios';
 
 const apiAddress = 'https://rest-api-fp.herokuapp.com';
 
+export const getAllData = async (dispatch) => {
+    let users = await getUsers();
+    dispatch({ type: "GETUSERS", payload: users })
+    let todos = await getTodos();
+    dispatch({ type: "GETTODOS", payload: todos })
+    let posts = await getPosts();
+    dispatch({ type: "GETPOSTS", payload: posts })
+    return false;
+}
+
 // GET DATA
 export const getUsers = async () => {
     let usersResp = await axios.get(`${apiAddress}/users`);
