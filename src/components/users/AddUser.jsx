@@ -33,7 +33,7 @@ const AddUser = () => {
                     street: '',
                     city: '',
                     zipcode: ''
-                });
+                }); 
                 setAddUserSuccess('hide');
                 setShowOrHide(false);
             }, 1500)

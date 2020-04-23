@@ -7,7 +7,7 @@ const Main = () => (
   <div className="left-side">
     <SearchField />
     <AddUser />
-    <Users />
+    <Users /> 
   </div>
 )
 

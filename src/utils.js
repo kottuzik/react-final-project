@@ -30,7 +30,7 @@ export const postTodo = async (obj, dispatch) => {
         }
         } catch (err) {
             return {
-                title: 'There is an error',
+                title: 'There is an error, try again later',
                 cssClass: 'message error'
             }
         }
@@ -57,7 +57,7 @@ export const postPost = async (obj, dispatch) => {
         }
     }catch(err){
         return {
-            title: 'There is an error',
+            title: 'There is an error, try again later',
             cssClass: 'message error'
         }
     }   
@@ -78,7 +78,7 @@ export const postUser = async (obj, dispatch) => {
         }
     }catch(err){
         return {
-            title: 'There is an error',
+            title: 'There is an error, try again later',
             cssClass: 'message error'
         }
     }
