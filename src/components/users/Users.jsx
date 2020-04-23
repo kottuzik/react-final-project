@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getAllData } from '../../utils';
 
 import User from './UserCard';
+import Loader from '../loader/loader';
 
 const Users = () => {
     const [isLoading, setIsloading] = useState(true);
@@ -23,7 +24,7 @@ const Users = () => {
 
     return(
         <>
-        {isLoading ? 'Loading...' : 
+        {isLoading ? <Loader /> : 
         <section className="users-section borderTop">
             <h1 className="title">Users:</h1>
           {filteredUsers.map(user => (
