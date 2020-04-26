@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { getAllData } from '../../utils';
 
-import User from './UserCard';
+import UserCard from './UserCard';
 import Loader from '../loader/loader';
 
 const Users = () => {
@@ -16,7 +16,8 @@ const Users = () => {
     }, [])
 
     let search = useSelector(state => state.search);
-    let users = useSelector(state => state.users)
+    let users = useSelector(state => state.users);
+    let todos = useSelector(state => state.todos);
 
     const [activeCard, setActiveCard] = useState(false);
     
@@ -28,7 +29,7 @@ const Users = () => {
         <section className="users-section borderTop">
             <h1 className="title">Users:</h1>
           {filteredUsers.map(user => (
-              <User key={user._id} userData={user} active={activeCard === user._id} setActiveCard={setActiveCard} />
+              <UserCard key={user._id} todos={todos.filter(t => t.userId === user._id)} userData={user} active={activeCard === user._id} setActiveCard={setActiveCard} />
           ))}  
         </section>
         }

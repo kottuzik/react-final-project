@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { deleteUser, userUpdate } from '../../utils';
 import { useDispatch } from 'react-redux';
 
-const UserCard = ({ userData, active, setActiveCard }) => {
+const UserCard = ({ todos, userData, active, setActiveCard }) => {
     const { _id, name, email, street, city, zipcode } = userData ;
     const history = useHistory();
     const [showOrHide, setShowOrHide] = useState(false);
@@ -40,6 +40,8 @@ const UserCard = ({ userData, active, setActiveCard }) => {
     return(
         <div className={active ? "user-card card current-card" : "user-card card "}>
             <div className="first-user-details">
+                Number of tasks: {todos.length} <br />
+                Incomplete: {todos.filter(t => t.completed === false).length}
                 <label>Name: <input name="name" type="text" defaultValue={name} onChange={handleChange} /></label>
                 <label>Email: <input name="email" type="text" defaultValue={email} onChange={handleChange}/></label>
             </div>
