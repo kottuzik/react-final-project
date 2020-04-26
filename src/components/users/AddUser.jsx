@@ -33,9 +33,8 @@ const AddUser = () => {
                     street: '',
                     city: '',
                     zipcode: ''
-                }); 
+                });
                 setAddUserSuccess('hide');
-                setShowOrHide(false);
             }, 1500)
         })
     }
@@ -48,19 +47,22 @@ const AddUser = () => {
             city: '',
             zipcode: ''
         })
-    }
+    } 
     const handleClose = (e) =>{
         e.preventDefault();
         setShowOrHide(!showOrHide);
     }
-
     return(
         <div className="add-user">
-            <button className="btn blue"  onClick={() => setShowOrHide(!showOrHide)}>ADD NEW USER</button>
+             <button className="btn blue"  onClick={() => setShowOrHide(!showOrHide)}>
+                   ADD NEW USER
+            </button>
             <form id="addUserForm" className={showOrHide ? "add-user-form" : "hide"}>
                <fieldset className="user-form">
-               <legend className="add-user-title">Fill the fields:</legend>
-                <button className="close" aria-label={"close"} onClick={handleClose}>&times;</button>
+               <legend className="add-user-title">Add New User</legend>
+               <button className="close" aria-label={"close"} onClick={handleClose}>
+                   &times;
+                </button>
                     <ul className="form-list">
                         <li className="form-item">
                             <label>

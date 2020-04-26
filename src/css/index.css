@@ -264,6 +264,7 @@ label {
 
 :root {
   --common-blue: #2bb3e4;
+  --common-dark: #333;
   --common-border: #d4f7fd;
   --common-red: #9e2929;
 }
@@ -562,21 +563,24 @@ label {
   margin-bottom: 12px;
 }
 
-.back-link {
-  margin-bottom: 8px;
-}
-
 .back-link a {
   text-decoration: none;
-  display: inline;
-  font-size: 18px;
-  color: var(--common-blue);
-  background-size: 1px 1em;
-  -webkit-box-shadow: inset 0 -0.175em white, inset 0 -0.2em blue;
-          box-shadow: inset 0 -0.175em white, inset 0 -0.2em blue;
+  color: var(--common-dark);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ccc;
+  width: 48px;
+  height: 48px;
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 5PX;
 }
 
 .back-link a:active {
-  font-size: 20px;
+  font-size: 36px;
 }
 /*# sourceMappingURL=index.css.map */

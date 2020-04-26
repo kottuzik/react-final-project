@@ -6,7 +6,9 @@ import AddUser from '../components/users/AddUser';
 const Main = () => (
   <div className="left-side">
     <SearchField />
-    <AddUser />
+    <div className="onlyMobile">
+      <AddUser/>
+    </div>
     <Users /> 
   </div>
 )

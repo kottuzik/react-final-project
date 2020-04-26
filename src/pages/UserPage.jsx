@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 // Importing Components
 import Todos from '../components/todos/Todos';
@@ -16,13 +16,16 @@ const UserPage = () => {
 
     return(      
             <div className="user-page">
-            <BackLink
-                to = '/'
-                label = 'Back to main page'
-            />
+            
                 {user ?
                 <div>
+                    <div className="flexWrap">
                     <h1 className="title">{user.name} ToDo List</h1>
+                    <BackLink
+                        to = '/'
+                        label = '&times;'
+                    />
+                    </div>
                     <Todos id={id} />
                     <Posts id={id} />
                 </div>

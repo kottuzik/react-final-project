@@ -6,8 +6,8 @@ function BackLink ({ label, to }){
       path: to
   });
   return(
-      <div className="back-link onlyMobile">
-           <Link to={to}><span>&#8592;</span>{label}</Link>
+      <div className="back-link">
+           <Link to={to}>{label}</Link>
       </div>
   )
 }

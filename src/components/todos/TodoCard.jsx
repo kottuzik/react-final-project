@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import BackLink from '../backLink/backLink';
 import { updateCompleted, updateIncompleted, deleteTodo } from '../../utils';
 
 const TodoCard = ({ todo }) => {
@@ -12,6 +13,7 @@ const TodoCard = ({ todo }) => {
     const markIncomplete = () => {
         updateIncompleted(todo._id)
         dispatch({type: "MARKINCOMPLETE", payload: todo._id})
+
     }
     const handleDelete = () =>{
         deleteTodo(todo._id)
