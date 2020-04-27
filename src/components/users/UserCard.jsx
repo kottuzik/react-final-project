@@ -39,11 +39,19 @@ const UserCard = ({ todos, userData, active, setActiveCard }) => {
     }
     return(
         <div className={active ? "user-card card current-card" : "user-card card "}>
-            <div className="first-user-details">
-                Number of tasks: {todos.length} <br />
-                Incomplete: {todos.filter(t => t.completed === false).length}
+            <div className="first-user-details" 
+            className={((todos.filter(t => t.completed === false).length) <= 0) ? "first-user-details" : "first-user-details markd-card" }>
+               
+                
                 <label>Name: <input name="name" type="text" defaultValue={name} onChange={handleChange} /></label>
                 <label>Email: <input name="email" type="text" defaultValue={email} onChange={handleChange}/></label>
+                <div className="flex">
+                    <p> Number of tasks: {todos.length} </p>
+                    
+                    <p className="space-left">Incomplete: <span className="bold">
+                        {todos.filter(t => t.completed === false).length}</span></p>
+                </div>
+                
             </div>
             <div className="navs">
                <button  className="btn blue" onClick={() => setShowOrHide(!showOrHide)}>

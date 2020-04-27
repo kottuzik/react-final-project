@@ -100,6 +100,10 @@ label {
   margin-bottom: 12px;
 }
 
+.space-left {
+  margin-left: 8px;
+}
+
 .incompleted-style {
   border: 2px solid var(--common-red);
 }
@@ -145,6 +149,14 @@ label {
 .message.error::before {
   content: '\00D7';
   background: #D8000C;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.markd-card {
+  border: 2px solid #D8000C;
 }
 
 @media all and (max-width: 970px) {
