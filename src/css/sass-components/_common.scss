@@ -62,7 +62,6 @@ label{
 }
 .current-card{
     border: 2px solid var(--common-blue);
-    background-color: green($color: #000000);
 }
 .message{
     margin-top: 8px; padding: 8px 0 8px 12px; font-size: 16px; line-height: 20px;
@@ -87,7 +86,7 @@ label{
     }
 }
 .bold{font-weight: 700;}
-.markd-card{
+.marked-card{
     border: 2px solid #D8000C;
 }
 

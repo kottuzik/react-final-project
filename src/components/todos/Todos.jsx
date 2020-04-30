@@ -9,9 +9,6 @@ const Todos = ({ id }) => {
     const todos = useSelector(state => state.todos)
     
     let filterTodos = todos.filter(x => x.userId === id);
-
-    
-    
     return(
         <div className="todos borderTop">
             {showAdd ? <AddTodo userId={id} setShowAdd={setShowAdd} /> : 

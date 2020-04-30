@@ -6,9 +6,6 @@ import AddPost from './AddPost';
 
 const Posts = ({ id }) => {
     const [showAdd, setShowAdd] = useState(false);
-   
-
-
     const posts = useSelector(state => state.posts)
 
     let filterPosts = posts.filter(x => x.userId === id);

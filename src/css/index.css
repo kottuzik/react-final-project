@@ -110,7 +110,6 @@ label {
 
 .current-card {
   border: 2px solid var(--common-blue);
-  background-color: 0;
 }
 
 .message {
@@ -155,7 +154,7 @@ label {
   font-weight: 700;
 }
 
-.markd-card {
+.marked-card {
   border: 2px solid #D8000C;
 }
 
@@ -286,6 +285,7 @@ label {
 }
 
 .user-card label {
+  display: block;
   margin-bottom: 8px;
 }
 

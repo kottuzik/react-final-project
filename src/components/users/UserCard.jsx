@@ -7,7 +7,9 @@ const UserCard = ({ todos, userData, active, setActiveCard }) => {
     const { _id, name, email, street, city, zipcode } = userData ;
     const history = useHistory();
     const [showOrHide, setShowOrHide] = useState(false);
-   
+    const dispatch = useDispatch()
+    const incompleteCount = todos.filter(t => t.completed === false).length;
+
     const [form, setForm] = useState({
         _id: _id,
         name: name,
@@ -20,8 +22,6 @@ const UserCard = ({ todos, userData, active, setActiveCard }) => {
     const handleChange = (e) => {
         setForm({...form, [e.target.name]: e.target.value});
     }
-
-    const dispatch = useDispatch()
 
     const watchUser = (id) => {
         history.push(`/${id}`);
@@ -37,22 +37,28 @@ const UserCard = ({ todos, userData, active, setActiveCard }) => {
         userUpdate(userData._id, form)
         dispatch({ type: 'UPDATEUSER', payload: userData._id })
     }
+   
     return(
-        <div className={active ? "user-card card current-card" : "user-card card "}>
-            <div className="first-user-details" 
-            className={((todos.filter(t => t.completed === false).length) <= 0) ? "first-user-details" : "first-user-details markd-card" }>
-               
-                
-                <label>Name: <input name="name" type="text" defaultValue={name} onChange={handleChange} /></label>
-                <label>Email: <input name="email" type="text" defaultValue={email} onChange={handleChange}/></label>
-                <div className="flex">
-                    <p> Number of tasks: {todos.length} </p>
-                    
-                    <p className="space-left">Incomplete: <span className="bold">
-                        {todos.filter(t => t.completed === false).length}</span></p>
-                </div>
-                
+        <div 
+            className={
+                (incompleteCount > 0) && active ? "user-card card current-card" 
+                :
+                (incompleteCount > 0) && !active ? "user-card card marked-card" 
+                :
+                (incompleteCount <= 0) && !active ? "user-card card" 
+                : 
+                "user-card card current-card"
+            }
+        >       
+            <label>Name: <input name="name" type="text" defaultValue={name} onChange={handleChange} /></label>
+            <label>Email: <input name="email" type="text" defaultValue={email} onChange={handleChange}/></label>
+            <div className="flex">
+                <p> Number of tasks: {todos.length} </p>
+
+                <p className="space-left">Incomplete: <span className="bold">
+                    {incompleteCount}</span></p>
             </div>
+                
             <div className="navs">
                <button  className="btn blue" onClick={() => setShowOrHide(!showOrHide)}>
                    Other Data

@@ -25,7 +25,14 @@ const TodoCard = ({ todo }) => {
             <p className="text"><span className="bold">Title:</span> {todo.title}</p>
             <p className="text"><span className="bold">Status Completed:</span> {todo.completed.toString()}</p>
             <div className="navs">
-                {todo.completed ? <button className="btn light-red" onClick={markIncomplete}>Mark Incompleted</button> : <button className="btn blue" onClick={markCompleted}>Mark Completed</button>}
+                {todo.completed ? 
+                <button className="btn light-red" onClick={markIncomplete}>
+                    Mark Incompleted
+                </button> 
+                : 
+                <button className="btn blue" onClick={markCompleted}>
+                    Mark Completed
+                </button>}
                 <button className="btn red" onClick={handleDelete}>Delete Task</button>
             </div>
         </div>
