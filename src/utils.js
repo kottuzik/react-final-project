@@ -50,7 +50,7 @@ export const updateCompleted = (id) => {
     .catch(err => console.log(err));
 }
 export const updateIncompleted = (id) => {
-    axios.patch(`${apiAddress}/todos/${id}`, {completed: false})
+    axios.patch(`${apiAddress}/todos/${id}`, { completed: false })
     .catch(err => console.log(err));
 }
 export const deleteTodo = (id) =>{

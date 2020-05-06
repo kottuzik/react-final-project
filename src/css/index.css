@@ -195,9 +195,8 @@ label {
 
 .btn {
   border-radius: 5px;
-  display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
   font-size: 12rem;
   font-weight: bold;
   padding: 6px 12px;

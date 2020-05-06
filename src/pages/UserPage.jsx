@@ -21,10 +21,10 @@ const UserPage = () => {
                 <div>
                     <div className="flexWrap">
                     <h1 className="title">{user.name} ToDo List</h1>
-                   {/*  <BackLink
+                    <BackLink
                         to = '/'
                         label = '&times;'
-                    /> */}
+                    />
                     </div>
                     <Todos id={id} />
                     <Posts id={id} />

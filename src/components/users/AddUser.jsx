@@ -54,13 +54,13 @@ const AddUser = () => {
     }
     return(
         <div className="add-user">
-             <button className="btn blue"  onClick={() => setShowOrHide(!showOrHide)}>
+             <button className="btn blue onlyMobile"  onClick={() => setShowOrHide(!showOrHide)}>
                    ADD NEW USER
             </button>
-            <form id="addUserForm" className={showOrHide ? "add-user-form" : "hide"}>
+            <form id="addUserForm" className={showOrHide ? "add-user-form" : "add-user-form mobileHide"}>
                <fieldset className="user-form">
                <legend className="add-user-title">Add New User</legend>
-               <button className="close" aria-label={"close"} onClick={handleClose}>
+               <button className="close onlyMobile" aria-label={"close"} onClick={handleClose}>
                    &times;
                 </button>
                     <ul className="form-list">
